@@ -10,9 +10,53 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_08_19_150402) do
+ActiveRecord::Schema[7.1].define(version: 2024_08_19_152016) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "challenges", force: :cascade do |t|
+    t.string "name"
+    t.integer "level"
+    t.string "format"
+    t.string "category"
+    t.text "content"
+    t.string "time"
+    t.integer "reward"
+    t.boolean "public"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "steps", force: :cascade do |t|
+    t.bigint "challenge_id", null: false
+    t.string "name"
+    t.integer "position"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["challenge_id"], name: "index_steps_on_challenge_id"
+  end
+
+  create_table "user_challenge_steps", force: :cascade do |t|
+    t.bigint "user_challenge_id", null: false
+    t.bigint "step_id", null: false
+    t.boolean "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["step_id"], name: "index_user_challenge_steps_on_step_id"
+    t.index ["user_challenge_id"], name: "index_user_challenge_steps_on_user_challenge_id"
+  end
+
+  create_table "user_challenges", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "challenge_id", null: false
+    t.date "start_date"
+    t.date "end_date"
+    t.boolean "done"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["challenge_id"], name: "index_user_challenges_on_challenge_id"
+    t.index ["user_id"], name: "index_user_challenges_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -26,4 +70,9 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_19_150402) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "steps", "challenges"
+  add_foreign_key "user_challenge_steps", "steps"
+  add_foreign_key "user_challenge_steps", "user_challenges"
+  add_foreign_key "user_challenges", "challenges"
+  add_foreign_key "user_challenges", "users"
 end
