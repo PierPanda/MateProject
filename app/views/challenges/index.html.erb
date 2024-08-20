@@ -9,7 +9,7 @@
         <% @challenges.each do |challenge| %>
           <div class="col pb-5">
             <%= link_to challenge, class:"text-decoration-none" do %>
-              <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+              <div class="card-category">
                 <div class="d-flex flex-column pb-3 text-white text-shadow-1">
                   <h3 class="p-5 fw-bold"><%= challenge.name %></h3>
                 </div>

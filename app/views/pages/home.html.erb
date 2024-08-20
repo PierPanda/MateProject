@@ -1,20 +1,24 @@
-<div class="banner" style="background-color: #273EE0; height: 800px;">
-  <div class="container">
-    <h1>MATE.</h1>
-      <h2><strong>Life Challenging</strong> to <strong>creative people</strong>!</h2>
-      <p>Défiez vous, dépassez vous, découvrez vous</p>
-    <a class="btn btn-flat" href="#">Apply now</a>
+<div class="banner" style="background-color: background: rgb(39,62,224); background: linear-gradient(180deg, rgba(39,62,224,1) 25%, rgba(187,245,53,1) 100%);; height: 800px;">
+  <div class="container text-center">
+      <h1><strong>Life Challenging</strong> to <strong>creative people</strong>!</h1>
+      <p class="text-end m-4">Défiez vous, dépassez vous, découvrez vous</p>
   </div>
 
-  <ul class="list list-unstyled ">
+  <ul class="list list-unstyled mt-4">
     <% @challenges.each do |challenge| %>
-      <li class="item">
-        <div class="content">
-
-          <%= challenge.name %>
-
+      <li class="item card-category text-center">
+        <div class="m-4">
+          <%= link_to challenge_path(challenge) do %>
+            <%= challenge.name %>
+          <% end %>
         </div>
       </li>
     <% end %>
   </ul>
+  <div class="d-flex justify-content-center mt-4">
+    <%= link_to "Tous les challenges", challenges_path, class: "btn btn-ghost" %>
+  </div>
+
+
+
 </div>
