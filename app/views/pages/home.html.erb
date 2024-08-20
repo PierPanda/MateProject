@@ -1,2 +1,20 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="banner" style="background-color: #273EE0; height: 800px;">
+  <div class="container">
+    <h1>MATE.</h1>
+      <h2><strong>Life Challenging</strong> to <strong>creative people</strong>!</h2>
+      <p>Défiez vous, dépassez vous, découvrez vous</p>
+    <a class="btn btn-flat" href="#">Apply now</a>
+  </div>
+
+  <ul class="list list-unstyled ">
+    <% @challenges.each do |challenge| %>
+      <li class="item">
+        <div class="content">
+
+          <%= challenge.name %>
+
+        </div>
+      </li>
+    <% end %>
+  </ul>
+</div>

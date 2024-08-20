@@ -81,3 +81,5 @@ Challenge.create!(name: "Randonnée en montagne", level: "facile", format: "dans
 Challenge.create!(name: "Voyage de découverte", level: "moyen", format: "dans la vraie vie", category: "aventure", content: "Voyager vers une nouvelle destination et explorer ses principales attractions pendant une semaine.", time: "long", reward: 100, public: true)
 Challenge.create!(name: "Sport extrême", level: "moyen", format: "dans la vraie vie", category: "aventure", content: "Essayer un sport extrême comme le saut en parachute, le parapente ou l'escalade.", time: "modéré", reward: 100, public: true)
 Challenge.create!(name: "Expédition en nature sauvage", level: "difficile", format: "dans la vraie vie", category: "aventure", content: "Participer à une expédition organisée dans une région sauvage pour plusieurs jours.", time: "long", reward: 200, public: true)
+
+print(Challenge.count)

@@ -1,0 +1,14 @@
+.list {
+  display: flex;
+  gap: 8px;
+  padding: 16px;
+  list-style: none;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+}
+
+.item {
+  flex-shrink: 0;
+  background-color: #FFF;
+  scroll-snap-align: center;
+}
