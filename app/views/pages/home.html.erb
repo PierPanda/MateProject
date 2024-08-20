@@ -8,17 +8,15 @@
     <% @challenges.each do |challenge| %>
       <li class="item card-category text-center">
         <div class="m-4">
-          <%= link_to challenge_path(challenge) do %>
+          <%= link_to challenge_path(challenge), class:"text-decoration-none text-white" do %>
             <%= challenge.name %>
           <% end %>
         </div>
       </li>
     <% end %>
   </ul>
+
   <div class="d-flex justify-content-center mt-4">
     <%= link_to "Tous les challenges", challenges_path, class: "btn btn-ghost" %>
   </div>
-
-
-
 </div>
