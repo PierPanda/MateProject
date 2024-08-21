@@ -1,6 +1,6 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: $light-gray;
+  background: $secondary;
   padding: 0;
 }
 
@@ -12,4 +12,15 @@
   width: 100px;
   margin: 0px;
   padding: 0px;
+}
+
+.dropdown-menu{
+  background: $secondary;
+  border-color: transparent;
+}
+
+.navbar-toggler{
+  border-color: transparent;
+  padding: 0;
+
 }
