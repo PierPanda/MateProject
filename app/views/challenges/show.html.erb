@@ -1,16 +1,36 @@
 <div class="container">
-
-<div class="card-trip">
-  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
-  <div class="card-trip-infos">
-    <div>
-      <h2><%= @challenge.name.capitalize %></h2>
-        <p><%= @challenge.content %></p>
+  <div class="card-trip mt-2">
+    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+    <div class="card-trip-infos">
+      <div>
+        <h2><%= @challenge.name.capitalize %></h2>
+        <p><%= @challenge.category %><%= @challenge.level %></p>
+        <p></p>
+      </div>
+      <h2 class="card-trip-pricing"><%= @challenge.reward %> points</h2>
+      <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
     </div>
-    <h2 class="card-trip-pricing"><%= @challenge.reward %> points</h2>
-    <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
   </div>
 </div>
 
+<div class="card-trip infos-container">
+  <h2>Details</h2>
+  <p><%= @challenge.content %></p>
+</div>
 
+<div class="card-trip infos-container">
+  <h2>Steps : </h2>
+  <p>Etape 1</p>
+  <p>Etape 2</p>
+  <p>Etape 3</p>
+  <p>Etape 4</p>
+</div>
+
+<div class="card-trip infos-container">
+  <h2>Autre infos</h2>
+  <p><%= @challenge.content %></p>
+</div>
+
+<div class="d-flex justify-content-center my-3">
+  <%= link_to "Commencer", "#", class: "btn-ghost text-decoration-none" %>
 </div>
