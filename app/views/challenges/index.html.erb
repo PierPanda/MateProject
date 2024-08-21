@@ -3,18 +3,7 @@
     <div class="col-md-12">
       <div class="row row-cols-1 row-cols-lg-3 align-items-stretch">
         <% @challenges.each do |challenge| %>
-          <div class="col pb-5">
-            <%= link_to challenge, class:"text-decoration-none" do %>
-              <div class="card-category position-relative">
-                <div class="d-flex flex-column pb-3 text-white text-shadow-1 position-absolute top-0 start-0">
-                  <h3 class="p-5 fw-bold"><%= challenge.name %></h3>
-                </div>
-                <div class="position-absolute bottom-0 end-0 mx-3">
-                  <p class="ms-4"><strong><%= challenge.reward %> points</strong></p>
-                </div>
-              </div>
-            <% end %>
-          </div>
+          <%= render "challenges/challenge", challenge: challenge %>
         <% end %>
       </div>
     </div>

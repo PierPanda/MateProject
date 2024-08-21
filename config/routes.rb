@@ -9,5 +9,13 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+  resources :challenges, only: %i[index show] do
+    resources :user_challenges, only: %i[create]
+  end
+  resources :user_challenges, only: %i[show]
+  resources :user_challenge_steps, only: %i[update]
   resources :challenges, only: %i[index show]
+
+  get 'dashboard', to: 'dashboard#index'
+  resources :user_challenges, only: %i[index update]
 end
