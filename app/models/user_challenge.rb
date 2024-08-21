@@ -1,7 +1,8 @@
 class UserChallenge < ApplicationRecord
   belongs_to :user
   belongs_to :challenge
-  has_many :user_challenge_steps
+  has_many :user_challenge_steps, dependent: :destroy
+
 
   after_create_commit :create_user_challenge_steps
 

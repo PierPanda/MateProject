@@ -3,12 +3,18 @@
 <%= render '/challenges/content_challenge', challenge: @user_challenge.challenge %>
 
 <div class="card-trip infos-container">
-  <% @user_challenge.user_challenge_steps.each do |user_challenge_step| %>
-    <%= simple_form_for user_challenge_step do |f| %>
-      <%= f.input :status, as: :boolean %>
-      <%= f.submit %>
+  <div class="infos-container">
+    <% @user_challenge.user_challenge_steps.each do |user_challenge_step| %>
+      <h6 class="infos-container mt-3">
+        <%= simple_form_for user_challenge_step do |f| %>
+          <%= f.input :status, as: :boolean, label: user_challenge_step.step.name, input_html: { onchange: 'this.form.submit()' } %>
+          <div class="d-none">
+            <%= f.submit %>
+          </div>
+        <% end %>
+      </h6>
     <% end %>
-  <% end %>
+  </div>
 </div>
 
 <div class="d-flex justify-content-center my-3">
