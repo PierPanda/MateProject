@@ -1,15 +1,8 @@
-# This file should ensure the existence of records required to run the application in every environment (production,
-# development, test). The code here should be idempotent so that it can be executed at any point in every environment.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Example:
-#
-#   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
-#     MovieGenre.find_or_create_by!(name: genre_name)
-#   end
-
 Step.destroy_all
+UserChallenge.destroy_all
 Challenge.destroy_all
+User.destroy_all
+user = User.create(email: "pleinlabox@gmail.com", password: "555555")
 
 # Category: Sportif
 challenge1 = Challenge.create!(
@@ -36,6 +29,11 @@ challenge2 = Challenge.create!(
   category: "créatif",
   content: "Prendre une photo créative chaque jour pendant 30 jours.", time: "long", reward: 50, public: true
 )
+Step.create!(
+  challenge: challenge2,
+  name: "Photographie quotidienne",
+  position: 30
+)
 
 # Category: Culinaire
 challenge3 = Challenge.create!(
@@ -47,6 +45,11 @@ challenge3 = Challenge.create!(
   time: "modéré",
   reward: 150,
   public: true
+)
+Step.create!(
+  challenge: challenge3,
+  name: "Organiser un dîner à thème",
+  position: 4 # menu/thème/date et invitations/dîner
 )
 
 # Category: Intellectuel
@@ -60,6 +63,11 @@ challenge4 = Challenge.create!(
   reward: 100,
   public: true
 )
+Step.create!(
+  challenge: challenge4,
+  name: "Compléter un cours en ligne",
+  position: 1
+)
 
 # Category: Développement personnel
 challenge5 = Challenge.create!(
@@ -67,10 +75,15 @@ challenge5 = Challenge.create!(
   level: "moyen",
   format: "dans la vraie vie",
   category: "développement personnel",
-  content: "Tenir un journal quotidien de vos pensées et objectifs pendant un mois.",
+  content: "Tenir un journal quotidien de vos pensées et objectifs pendant 30 jours.",
   time: "long",
   reward: 100,
   public: true
+)
+Step.create!(
+  challenge: challenge5,
+  name: "Tenir un journal quotidien",
+  position: 30
 )
 
 # Category: Écologie
@@ -83,6 +96,11 @@ challenge6 = Challenge.create!(
   time: "court",
   reward: 100,
   public: true
+)
+Step.create!(
+  challenge: challenge6,
+  name: "Planter un arbre",
+  position: 30
 )
 
 # Category: Bien-être
@@ -113,6 +131,11 @@ challenge8 = Challenge.create!(
   reward: 50,
   public: true
 )
+Step.create!(
+  challenge: challenge8,
+  name: "Volontariat",
+  position: 1
+)
 
 # Category: Culturel
 challenge9 = Challenge.create!(
@@ -124,6 +147,11 @@ challenge9 = Challenge.create!(
   time: "long",
   reward: 100,
   public: true
+)
+Step.create!(
+  challenge: challenge9,
+  name: "Visite de musée virtuelle",
+  position: 5
 )
 
 # Category: Technologique
@@ -137,6 +165,12 @@ challenge10 = Challenge.create!(
   reward: 50,
   public: true
 )
+Step.create!(
+  challenge: challenge10,
+  name: "Initiation à la programmation",
+  position: 30
+)
+
 
 # Category: Famille
 challenge11 = Challenge.create!(
@@ -148,6 +182,11 @@ challenge11 = Challenge.create!(
   time: "long",
   reward: 50,
   public: true
+)
+Step.create!(
+  challenge: challenge11,
+  name: "Jeu de société en famille",
+  position: 4
 )
 
 # Category: Aventure
@@ -161,5 +200,14 @@ challenge12 = Challenge.create!(
   reward: 50,
   public: true
 )
+Step.create!(
+  challenge: challenge12,
+  name: "Randonnée en montagne",
+  position: 3 # choisir trajet / prépa équipement / réaliser rando
+)
+
+UserChallenge.create(user: user, challenge: challenge5)
+UserChallenge.create(user: user, challenge: challenge7)
+UserChallenge.create(user: user, challenge: challenge8)
 
 print(Challenge.count)
