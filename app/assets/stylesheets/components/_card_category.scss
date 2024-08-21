@@ -2,15 +2,16 @@
   background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg);
   background-size: cover;
   background-position: center;
-  height: 180px;
-  width: 85%;
+  margin: auto;
+  height: 200px;
+  width: 95%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   color: white;
   font-size: 24px;
   font-weight: bold;
-  text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
-  border-radius: 5px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  box-shadow: 0 0 2px $light-gray;
 }
