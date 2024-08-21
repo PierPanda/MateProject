@@ -14,4 +14,8 @@ Rails.application.routes.draw do
   end
   resources :user_challenges, only: %i[show]
   resources :user_challenge_steps, only: %i[update]
+  resources :challenges, only: %i[index show]
+
+  get 'dashboard', to: 'dashboard#index'
+  resources :user_challenges, only: %i[index update]
 end
