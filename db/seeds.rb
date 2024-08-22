@@ -150,7 +150,27 @@ challenge9 = Challenge.create!(
 )
 Step.create!(
   challenge: challenge9,
-  name: "Visite de musée virtuelle",
+  name: "Le Louvre, Paris",
+  position: 1
+)
+Step.create!(
+  challenge: challenge9,
+  name: "Le MoMA, New York",
+  position: 2
+)
+Step.create!(
+  challenge: challenge9,
+  name: "Le Rijksmuseum, Amsterdam",
+  position: 3
+)
+Step.create!(
+  challenge: challenge9,
+  name: "Iziko South African Museum, Cape Town",
+  position: 4
+)
+Step.create!(
+  challenge: challenge9,
+  name: "Museu de Arte, São Paulo",
   position: 5
 )
 
@@ -171,7 +191,6 @@ Step.create!(
   position: 30
 )
 
-
 # Category: Famille
 challenge11 = Challenge.create!(
   name: "Jeu de société en famille",
@@ -185,7 +204,22 @@ challenge11 = Challenge.create!(
 )
 Step.create!(
   challenge: challenge11,
-  name: "Jeu de société en famille",
+  name: "Semaine 1",
+  position: 1
+)
+Step.create!(
+  challenge: challenge11,
+  name: "Semaine 2",
+  position: 2
+)
+Step.create!(
+  challenge: challenge11,
+  name: "Semaine 3",
+  position: 3
+)
+Step.create!(
+  challenge: challenge11,
+  name: "Semaine 4",
   position: 4
 )
 
@@ -202,8 +236,18 @@ challenge12 = Challenge.create!(
 )
 Step.create!(
   challenge: challenge12,
-  name: "Randonnée en montagne",
-  position: 3 # choisir trajet / prépa équipement / réaliser rando
+  name: "Choisis ton itinéraire !",
+  position: 1
+)
+Step.create!(
+  challenge: challenge12,
+  name: "Ton équipement est prêt Mate ?",
+  position: 2
+)
+Step.create!(
+  challenge: challenge12,
+  name: "Checke la box si tu as réalisé cette rando !",
+  position: 3
 )
 
 UserChallenge.create(user: user, challenge: challenge5)
