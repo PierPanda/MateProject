@@ -206,7 +206,7 @@ Step.create!(
   position: 3 # choisir trajet / prépa équipement / réaliser rando
 )
 
-UserChallenge.create(user: user, challenge: challenge5)
+UserChallenge.create(user: user, challenge: challenge5, done: true)
 UserChallenge.create(user: user, challenge: challenge7)
 UserChallenge.create(user: user, challenge: challenge8)
 

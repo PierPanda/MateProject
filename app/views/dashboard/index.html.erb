@@ -1,13 +1,24 @@
-<div class="px-20 py-20 my-5 text-center" id="header-dashboard">
-  <%= render "shared/avatar" %>
-    <div class="mb-4 mt-n10 display-5 fw-bold text-body-emphasis">Tes challenges en cours !</div>
-    <div class="col-lg-6 mx-auto">
-      <div class="d-grid gap-1 d-sm-flex justify-content-sm-center">
-        <button type="button" class="btn btn-outline-secondary btn-lg px-4">Primary button</button>
-        <button type="button" class="btn btn-outline-secondary btn-lg px-4">Secondary</button>
-        <button type="button" class="btn btn-outline-secondary btn-lg px-4">Third</button>
+ <div class="container">
+  <div class="px-3 py-3 my-5 text-center" id="header-dashboard">
+    <%= render "shared/avatar" %>
+      <p class="mb-4 display-5">Welcome <%= current_user.email %> !</p>
+      <div class="col-lg-6 mx-auto">
+        <div class="d-grid gap-1 d-sm-flex justify-content-evenly justify-content-sm-center">
+          <ul class="list-inline tabs-underlined" data-controller="tabs">
+            <li>
+            <%# <i class="fa-solid fa-star fa-fw"></i> %>
+              <%= link_to "En cours", dashboard_path(status: 'in_progress'), class:"tab-underlined active", data: {action:"click->tabs#changeTab", target:"tabs.link"} %>
+            </li>
+            <li>
+              <a href="#" class="tab-underlined" data-action="click->tabs#changeTab" data-target="tabs.link"><i class="fa-solid fa-star fa-fw"></i></a>
+            </li>
+            <li>
+              <a href="#" class="tab-underlined" data-action="click->tabs#changeTab" data-target="tabs.link"><i class="fa-solid fa-star fa-fw"></i></a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
+  </div>
 </div>
 
 <div class="container" id="section1">
@@ -21,3 +32,6 @@
     </div>
   </div>
 </div>
+
+
+<script src="application.js"></script>
