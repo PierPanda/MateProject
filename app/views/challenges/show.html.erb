@@ -2,13 +2,8 @@
 
 <%= render 'challenges/content_challenge', challenge: @challenge, user_challenge: @user_challenge %>
 
-<div class="card-trip infos-container">
-  <h2>Steps : </h2>
-  <p>Etape 1</p>
-  <p>Etape 2</p>
-  <p>Etape 3</p>
-  <p>Etape 4</p>
-</div>
+<%= render 'challenges/challenge_steps', challenge: @challenge %>
+
 
 <div class="d-flex justify-content-center my-3">
   <%# <%= link_to "Commencer", use, class: "btn-ghost text-decoration-none" %>

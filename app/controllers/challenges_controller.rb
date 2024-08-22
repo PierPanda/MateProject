@@ -1,7 +1,10 @@
 class ChallengesController < ApplicationController
   # index/show/new/create/edit/update
   def index
-    @challenges = Challenge.all
+    # Si challenge[params vide], on affiche challenge.all, sinon on affiche les challenge par category
+    @challenges = params[:category].blank? ? Challenge.all : Challenge.where(category: params[:category])
+    @categories = Challenge.category
+
   end
 
   def show

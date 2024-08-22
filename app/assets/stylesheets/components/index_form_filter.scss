@@ -1,0 +1,24 @@
+.form-filter{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  box-sizing: border-box;
+  font-family: roboto;
+  flex-direction: column;
+  padding: 10px;
+  border-width: 10px;
+  color: #333;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  select{
+    width: 300px;
+    height: 40px;
+    font-size: 16px;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+  }
+}
