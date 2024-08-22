@@ -1,3 +1,13 @@
+<div class="form-filter" data-controller="filter-category">
+  <%= form_tag challenges_path, method: 'get' do %>
+    <%= select_tag :category, options_for_select(@categories), include_blank: true, data: { action: "change->filter-category#filter", class:"select" } %>
+    <div class="d-none">
+      <%= submit_tag 'Filter' %>
+    </div>
+  <% end %>
+</div>
+
+
 <div class="container mt-3" id="section1">
   <div class="row pt-5">
     <div class="col-md-12">
