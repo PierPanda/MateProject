@@ -1,9 +1,10 @@
 <div class="container">
   <div class="card-trip mt-2">
-    <img src="url(<%= cl_image_path(challenge.photo.key) %>)"/>
+    <%= cl_image_tag(challenge.photo.key) %>
     <div class="card-trip-infos">
       <div>
-        <h2>Level:<%= challenge.level %></h2>
+        <h2>Level: 1</h2>
+        <%# <h2>Level:<%= challenge.level</h2>  %>
         <h2><%= challenge.name.capitalize %></h2>
         <p><%= challenge.category %></p>
         <p></p>
