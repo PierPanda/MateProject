@@ -10,10 +10,12 @@
               <%= link_to "En cours", dashboard_path(status: 'in_progress'), class:"tab-underlined active", data: {action:"click->tabs#changeTab", target:"tabs.link"} %>
             </li>
             <li>
-              <a href="#" class="tab-underlined" data-action="click->tabs#changeTab" data-target="tabs.link"><i class="fa-solid fa-star fa-fw"></i></a>
+              <%# <a href="#" class="tab-underlined" data-action="click->tabs#changeTab" data-target="tabs.link"><i class="fa-solid fa-star fa-fw"></i></a> %>
+              <%= link_to "Personnalisés", dashboard_path(status: 'personal_challenges'), class:"tab-underlined active", data: {action:"click->tabs#changeTab", target:"tabs.link"} %>
             </li>
             <li>
-              <a href="#" class="tab-underlined" data-action="click->tabs#changeTab" data-target="tabs.link"><i class="fa-solid fa-star fa-fw"></i></a>
+              <%# <a href="#" class="tab-underlined" data-action="click->tabs#changeTab" data-target="tabs.link"><i class="fa-solid fa-star fa-fw"></i></a> %>
+              <%= link_to "Validés", dashboard_path(status: 'accomplished'), class:"tab-underlined active", data: {action:"click->tabs#changeTab", target:"tabs.link"} %>
             </li>
           </ul>
         </div>
