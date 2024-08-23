@@ -45,7 +45,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_22_155143) do
     t.index ["step_id"], name: "index_user_challenge_steps_on_step_id"
     t.index ["user_challenge_id"], name: "index_user_challenge_steps_on_user_challenge_id"
   end
-
+ 
   create_table "user_challenges", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.bigint "challenge_id", null: false
