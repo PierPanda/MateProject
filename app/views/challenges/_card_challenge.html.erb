@@ -1,9 +1,10 @@
 <div class="container">
   <div class="card-trip mt-2">
-    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+    <%= cl_image_tag(challenge.photo.key) %>
     <div class="card-trip-infos">
       <div>
-        <h2>Level:<%= challenge.level %></h2>
+        <h2>Level: 1</h2>
+        <%# <h2>Level:<%= challenge.level</h2>  %>
         <h2><%= challenge.name.capitalize %></h2>
         <p><%= challenge.category %></p>
         <p></p>

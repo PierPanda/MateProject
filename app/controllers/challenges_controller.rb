@@ -11,5 +11,4 @@ class ChallengesController < ApplicationController
     @user_challenge = UserChallenge.new
     @challenge = Challenge.find(params[:id])
   end
-
 end
