@@ -1,3 +1,5 @@
+require "open-uri"
+
 Step.destroy_all
 UserChallenge.destroy_all
 Challenge.destroy_all
@@ -5,6 +7,7 @@ User.destroy_all
 user = User.create(email: "pleinlabox@gmail.com", password: "555555")
 
 # Category: Sportif
+file = URI.open("https://res.cloudinary.com/dxglkewb3/image/upload/v1724169036/natalia-blauth-XfnnyFtobXo-unsplash_j8jxtc.jpg")
 challenge1 = Challenge.create!(
   name: "Faire 10 000 pas par jour",
   level: "facile",
@@ -15,11 +18,13 @@ challenge1 = Challenge.create!(
   reward: 50,
   public: true
 )
+challenge1.photo.attach(io: file, filename: "challenge1.png", content_type: "image/png")
 Step.create!(
   challenge: challenge1,
   name: "Faire 10 000 pas par jour",
   position: 1
 )
+
 
 # Category: Créatif
 challenge2 = Challenge.create!(
