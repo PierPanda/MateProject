@@ -4,6 +4,8 @@ class Challenge < ApplicationRecord
   has_one_attached :photo
 
   def self.category
-    Challenge.all.pluck(:category).uniq
+    cat = Challenge.all.pluck(:category).uniq
+    cat.insert(0, "All")
+    return cat
   end
 end
