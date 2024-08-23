@@ -4,8 +4,7 @@ import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
 
   filter() {
-    this.element.children[0].requestSubmit()
-
+    this.element.children[0].submit()
   }
 
   connect() {
