@@ -1,5 +1,4 @@
 require "open-uri"
-
 Step.destroy_all
 UserChallenge.destroy_all
 Challenge.destroy_all
@@ -8,7 +7,7 @@ user = User.create(email: "pleinlabox@gmail.com", password: "555555")
 
 # Category: Sportif
 file = URI.open("https://res.cloudinary.com/dxglkewb3/image/upload/v1724169036/natalia-blauth-XfnnyFtobXo-unsplash_j8jxtc.jpg")
-challenge1 = Challenge.create!(
+challenge1 = Challenge.new(
   name: "Faire 10 000 pas par jour",
   level: "facile",
   format: "dans la vraie vie",
@@ -19,21 +18,25 @@ challenge1 = Challenge.create!(
   public: true
 )
 challenge1.photo.attach(io: file, filename: "challenge1.png", content_type: "image/png")
+challenge1.save
+
 Step.create!(
   challenge: challenge1,
   name: "Faire 10 000 pas par jour",
   position: 1
 )
 
-
 # Category: Créatif
-challenge2 = Challenge.create!(
+file = URI.open("https://res.cloudinary.com/dxglkewb3/image/upload/v1724169035/getty-images--M5qXJdoHUI-unsplash_jcrs1a.jpg")
+challenge2 = Challenge.new(
   name: "Photographie quotidienne",
   level: "facile",
   format: "dans la vraie vie",
   category: "créatif",
   content: "Prendre une photo créative chaque jour pendant 30 jours.", time: "long", reward: 50, public: true
 )
+challenge2.photo.attach(io: file, filename: "challenge2.png", content_type: "image/png")
+challenge2.save
 Step.create!(
   challenge: challenge2,
   name: "Photographie quotidienne",
@@ -41,7 +44,8 @@ Step.create!(
 )
 
 # Category: Culinaire
-challenge3 = Challenge.create!(
+file = URI.open("https://res.cloudinary.com/dxglkewb3/image/upload/v1724420548/laura-adai-5jf7kzLBILE-unsplash_bn00wo.jpg")
+challenge3 = Challenge.new(
   name: "Organiser un dîner à thème",
   level: "moyen",
   format: "dans la vraie vie",
@@ -51,6 +55,8 @@ challenge3 = Challenge.create!(
   reward: 150,
   public: true
 )
+challenge3.photo.attach(io: file, filename: "challenge3.png", content_type: "image/png")
+challenge3.save
 Step.create!(
   challenge: challenge3,
   name: "Organiser un dîner à thème",
@@ -58,7 +64,8 @@ Step.create!(
 )
 
 # Category: Intellectuel
-challenge4 = Challenge.create!(
+file = URI.open("https://res.cloudinary.com/dxglkewb3/image/upload/v1724420543/getty-images-SP1eE3q6MY8-unsplash_dt2a9x.jpg")
+challenge4 = Challenge.new(
   name: "Compléter un cours en ligne",
   level: "moyen",
   format: "en ligne",
@@ -68,6 +75,8 @@ challenge4 = Challenge.create!(
   reward: 100,
   public: true
 )
+challenge4.photo.attach(io: file, filename: "challenge4.png", content_type: "image/png")
+challenge4.save
 Step.create!(
   challenge: challenge4,
   name: "Compléter un cours en ligne",
@@ -75,7 +84,8 @@ Step.create!(
 )
 
 # Category: Développement personnel
-challenge5 = Challenge.create!(
+file = URI.open("https://res.cloudinary.com/dxglkewb3/image/upload/v1724420544/joshua-hoehne-uRf4Yals3ew-unsplash_nndnok.jpg")
+challenge5 = Challenge.new(
   name: "Tenir un journal quotidien",
   level: "moyen",
   format: "dans la vraie vie",
@@ -85,6 +95,8 @@ challenge5 = Challenge.create!(
   reward: 100,
   public: true
 )
+challenge5.photo.attach(io: file, filename: "challenge5.png", content_type: "image/png")
+challenge5.save
 Step.create!(
   challenge: challenge5,
   name: "Tenir un journal quotidien",
@@ -92,7 +104,8 @@ Step.create!(
 )
 
 # Category: Écologie
-challenge6 = Challenge.create!(
+file = URI.open("https://res.cloudinary.com/dxglkewb3/image/upload/v1724169037/getty-images-evsO5NsynMk-unsplash_ygecjw.jpg")
+challenge6 = Challenge.new(
   name: "Planter un arbre",
   level: "moyen",
   format: "dans la vraie vie",
@@ -102,6 +115,8 @@ challenge6 = Challenge.create!(
   reward: 100,
   public: true
 )
+challenge6.photo.attach(io: file, filename: "challenge6.png", content_type: "image/png")
+challenge6.save
 Step.create!(
   challenge: challenge6,
   name: "Planter un arbre",
@@ -109,7 +124,8 @@ Step.create!(
 )
 
 # Category: Bien-être
-challenge7 = Challenge.create!(
+file = URI.open("https://res.cloudinary.com/dxglkewb3/image/upload/v1724420543/daniel-martinez-qgj2fSHiQjQ-unsplash_mloe9g.jpg")
+challenge7 = Challenge.new(
   name: "Défi sommeil de qualité",
   level: "moyen",
   format: "dans la vraie vie",
@@ -119,6 +135,8 @@ challenge7 = Challenge.create!(
   reward: 100,
   public: true
 )
+challenge7.photo.attach(io: file, filename: "challenge7.png", content_type: "image/png")
+challenge7.save
 Step.create!(
   challenge: challenge7,
   name: "Défi sommeil de qualité",
@@ -126,7 +144,8 @@ Step.create!(
 )
 
 # Category: Société
-challenge8 = Challenge.create!(
+file = URI.open("https://res.cloudinary.com/dxglkewb3/image/upload/v1724420539/ahmet-kurt-iwTCGwgFLaE-unsplash_uo3ze9.jpg")
+challenge8 = Challenge.new(
   name: "Volontariat",
   level: "facile",
   format: "dans la vraie vie",
@@ -136,6 +155,8 @@ challenge8 = Challenge.create!(
   reward: 50,
   public: true
 )
+challenge8.photo.attach(io: file, filename: "challenge8.png", content_type: "image/png")
+challenge8.save
 Step.create!(
   challenge: challenge8,
   name: "Volontariat",
@@ -143,7 +164,8 @@ Step.create!(
 )
 
 # Category: Culturel
-challenge9 = Challenge.create!(
+file = URI.open("https://res.cloudinary.com/dxglkewb3/image/upload/v1724420538/getty-images-c_JmmUnX5Ws-unsplash_l5w6gn.jpg")
+challenge9 = Challenge.new(
   name: "Visite de musée virtuelle",
   level: "moyen",
   format: "en ligne",
@@ -153,6 +175,8 @@ challenge9 = Challenge.create!(
   reward: 100,
   public: true
 )
+challenge9.photo.attach(io: file, filename: "challenge9.png", content_type: "image/png")
+challenge9.save
 Step.create!(
   challenge: challenge9,
   name: "Le Louvre, Paris",
@@ -180,7 +204,8 @@ Step.create!(
 )
 
 # Category: Technologique
-challenge10 = Challenge.create!(
+file = URI.open("https://res.cloudinary.com/dxglkewb3/image/upload/v1724420539/getty-images-duYNQBketJg-unsplash_ooxbbs.jpg")
+challenge10 = Challenge.new(
   name: "Initiation à la programmation",
   level: "facile",
   format: "en ligne",
@@ -190,6 +215,8 @@ challenge10 = Challenge.create!(
   reward: 50,
   public: true
 )
+challenge10.photo.attach(io: file, filename: "challenge10.png", content_type: "image/png")
+challenge10.save
 Step.create!(
   challenge: challenge10,
   name: "Initiation à la programmation",
@@ -197,7 +224,8 @@ Step.create!(
 )
 
 # Category: Famille
-challenge11 = Challenge.create!(
+file = URI.open("https://res.cloudinary.com/dxglkewb3/image/upload/v1724420537/ahmed-OsP41Kdn53Q-unsplash_zoqj7f.jpg")
+challenge11 = Challenge.new(
   name: "Jeu de société en famille",
   level: "facile",
   format: "dans la vraie vie",
@@ -207,6 +235,8 @@ challenge11 = Challenge.create!(
   reward: 50,
   public: true
 )
+challenge11.photo.attach(io: file, filename: "challenge11.png", content_type: "image/png")
+challenge11.save
 Step.create!(
   challenge: challenge11,
   name: "Semaine 1",
@@ -229,7 +259,8 @@ Step.create!(
 )
 
 # Category: Aventure
-challenge12 = Challenge.create!(
+file = URI.open("https://res.cloudinary.com/dxglkewb3/image/upload/v1724420537/hans-isaacson-rG0ffdofZN8-unsplash_ixvoqi.jpg")
+challenge12 = Challenge.new(
   name: "Randonnée en montagne",
   level: "facile",
   format: "dans la vraie vie",
@@ -239,6 +270,8 @@ challenge12 = Challenge.create!(
   reward: 50,
   public: true
 )
+challenge12.photo.attach(io: file, filename: "challenge12.png", content_type: "image/png")
+challenge12.save
 Step.create!(
   challenge: challenge12,
   name: "Choisis ton itinéraire !",
