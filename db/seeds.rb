@@ -1351,4 +1351,12 @@ UserChallenge.create!(user: user1, challenge: challenge5, done: true)
 UserChallenge.create!(user: user1, challenge: challenge7)
 UserChallenge.create!(user: user1, challenge: challenge8)
 
+UserChallenge.create!(user: user2, challenge: challenge5, done: true)
+UserChallenge.create!(user: user2, challenge: challenge7)
+UserChallenge.create!(user: user2, challenge: challenge8)
+
+UserChallenge.create!(user: user3, challenge: challenge5, done: true)
+UserChallenge.create!(user: user3, challenge: challenge7)
+UserChallenge.create!(user: user3, challenge: challenge8)
+
 print(Challenge.count)
