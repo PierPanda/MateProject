@@ -1,6 +1,6 @@
 <div class="form-filter" data-controller="filter-category">
   <%= form_tag challenges_path, method: 'get' do %>
-    <%= select_tag :category, options_for_select(@categories, @category), label: @category, include_blank: false , data: { action: "change->filter-category#filter" } %>
+    <%= select_tag :category, options_for_select(Challenge::CATEGORIES, @category), label: @category, include_blank: false , data: { action: "change->filter-category#filter" } %>
   <% end %>
 </div>
 
