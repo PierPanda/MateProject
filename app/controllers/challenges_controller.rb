@@ -4,7 +4,7 @@ class ChallengesController < ApplicationController
     # Si challenge[params vide], on affiche challenge.all, sinon on affiche les challenge par category
     @category = params[:category]
     @challenges = @category == "All" || @category.blank? ? Challenge.all : Challenge.where(category: @category)
-    @categories = Challenge.category
+    @categories = Challenge::CATEGORIES
   end
 
   def show
@@ -13,18 +13,20 @@ class ChallengesController < ApplicationController
   end
 
   def new
-    @category = params[:category]
-    @categories = Challenge.category
-    @level = params[:level]
-    @levels = Challenge.level
-    @time = params[:time]
-    @times = Challenge.time
+    @categories = Challenge::CATEGORIES
+    @levels = Challenge::LEVEL
+    @times = Challenge::TIME
     @challenge = Challenge.new
   end
 
   def create
     #recupérer les steps et itérer dessus pour les créer avec un step.new
+    # Instancier un challenge avec les challenge params
+    # Appeler le service ChallengeOpenAI avec le challenge en argument
+
     @challenge = Challenge.new(challenge_params)
+    @challenge_openai_service = ChallengeOpenAI.new(@challenge)
+    @challenge_openai_service.call
   end
 
   private

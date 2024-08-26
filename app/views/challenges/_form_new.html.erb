@@ -1,13 +1,13 @@
 <div class="container container-new d-flex justify-content-center col-sm-3 col-xs-3">
   <div class="feedback-form justify-content-center m-3">
-    <h2 class="header text-center">Create your own challenges</h2>
+    <h2 class="header text-center">New challenge</h2>
     <div>
       <%= simple_form_for [@challenge] do |f| %>
-        <%= f.input :level, collection: @levels, as: :select, label: "Choose a difficulty to add", class:"mb-3 form-group" %>
-        <%= f.input :category, collection: @categories, as: :select, label: "Choose a category to add", class:"mb-3 form-group" %>
-        <%= f.input :time, collection: @times, as: :select, label: "Choose a category to add", class:"mb-3 form-group" %>
+        <%= f.input :level, collection: Challenge::LEVEL, as: :select, label: "Choose a difficulty to add", class:"mb-3 form-group" %>
+        <%= f.input :category, collection: Challenge::CATEGORIES, as: :select, label: "Choose a category to add", class:"mb-3 form-group" %>
+        <%= f.input :time, collection: Challenge::TIME, as: :select, label: "Choose a category to add", class:"mb-3 form-group" %>
         <%= f.input :content, class:"mb-3 form-group" %>
-        <%= f.button :submit, class:"text-center btn-primary" %>
+        <%= f.button :submit, class:"text-center btn-ghost" %>
       <% end %>
     </div>
   </div>

@@ -1,7 +1,6 @@
 class UserChallengeStepsController < ApplicationController
 
   def update
-
     @user_challenge_step = UserChallengeStep.find(params[:id])
     @user_challenge_step.update(user_challenge_step_params)
     respond_to do |format|
@@ -10,7 +9,6 @@ class UserChallengeStepsController < ApplicationController
       end
       format.html { redirect_to user_challenge_path(@user_challenge_step.user_challenge) }
     end
-
   end
 
   private

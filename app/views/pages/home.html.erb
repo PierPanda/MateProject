@@ -8,7 +8,7 @@
 <div class="slider-container">
   <ul class="list list-unstyled mt-4">
     <% @challenges.each do |challenge| %>
-      <li class="item card-category text-center" style="background-image: url(<%= cl_image_path(challenge.photo.key) %>)">
+      <li class="item card-category text-center" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(<%= cl_image_path(challenge.photo.key) %>)">
         <div>
           <%= link_to challenge_path(challenge), class:"text-decoration-none text-white" do %>
             <%= challenge.name %>
