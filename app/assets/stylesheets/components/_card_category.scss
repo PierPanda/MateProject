@@ -7,10 +7,28 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   color: white;
   font-size: 24px;
   font-weight: bold;
   border-radius: 10px;
   box-shadow: 0 0 2px $light-gray;
+}
+
+@media (prefers-reduced-motion: no-preference){
+  .card-category{
+    margin-top:0%;
+    animation: fade-in linear forwards;
+    animation-timeline: view();
+    animation-range-start: cover 0%;
+    animation-range-end: contain 20%;
+  }
+
+  @keyframes fade-in {
+    from{
+        transform: scale(0.95);
+    }
+    to{
+        transform: scale(1);
+    }
+  }
 }
