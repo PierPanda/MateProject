@@ -1,3 +1,5 @@
-<%= simple_form_for [challenge, user_challenge] do |f| %>
+<%= simple_form_for [challenge, user_challenge], html: { class: "btn-ghost" }  do |f| %>
     <%= f.submit %>
 <% end %>
+
+<%# bouton submit ne disparait pas apres click (création d'un user_challenge) et se transforme en "update" %>

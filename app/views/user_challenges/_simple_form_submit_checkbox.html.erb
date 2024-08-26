@@ -2,8 +2,5 @@
 
   <%= simple_form_for user_challenge_step, html: {data: { controller: "submit-form-checkbox" }} do |f| %>
     <%= f.input :status, as: :boolean, label: user_challenge_step.step.name, input_html: { class: user_challenge_step.status ? 'is-valid' : '', data: { action: "change->submit-form-checkbox#submit" } } %>
-    <div class="d-none">
-      <%= f.submit %>
-    </div>
   <% end %>
 </div>
