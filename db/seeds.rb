@@ -761,7 +761,7 @@ Step.create!(
 )
 
 # Category: Éducation
-file = URI.open("https://res.cloudinary.com/dxglkewb3/image/upload/v1724677250/sindy-sussengut-70pQEnsbYYY-unsplash_1_mpakdy.jpg")
+file = URI.open("https://res.cloudinary.com/dxglkewb3/image/upload/v1724678013/mark-konig-INqYo7hwT-s-unsplash_sc9ieq.jpg")
 challenge29 = Challenge.new(
   name: "Apprendre une nouvelle langue",
   level: "moyen",
@@ -819,13 +819,13 @@ Step.create!(
   position: 3
 )
 
-file = URI.open("https://res.cloudinary.com/dxglkewb3/image/upload/v1723195346/samples/look-up.jpg")
+file = URI.open("https://res.cloudinary.com/dxglkewb3/image/upload/v1724678197/florian-klauer-mk7D-4UCfmg-unsplash_sqyewg.jpg")
 challenge31 = Challenge.new(
   name: "Rédiger un essai",
   level: "moyen",
   format: "en ligne",
   category: "éducation",
-  content: "Rédiger un essai sur un sujet d'actualité en 48 heures.",
+  content: "Rédiger un essai de 4 pages sur un sujet d'actualité en 48 heures et l'envoyer à 3 ami.es minimum !",
   time: "court",
   reward: 150,
   public: true
@@ -848,7 +848,7 @@ Step.create!(
   position: 3
 )
 
-file = URI.open("https://res.cloudinary.com/dxglkewb3/image/upload/v1723195346/samples/look-up.jpg")
+file = URI.open("https://res.cloudinary.com/dxglkewb3/image/upload/v1724680795/aaron-burden-CKlHKtCJZKk-unsplash_uwxyrd.jpg")
 challenge32 = Challenge.new(
   name: "Tenir un journal quotidien",
   level: "moyen",
@@ -868,13 +868,13 @@ Step.create!(
 )
 
 # Category: Arts et musique
-file = URI.open("https://res.cloudinary.com/dxglkewb3/image/upload/v1723195346/samples/look-up.jpg")
+file = URI.open("https://res.cloudinary.com/dxglkewb3/image/upload/v1724671577/paulette-wooten-FMiczIq8orU-unsplash_a5ykre.jpg")
 challenge33 = Challenge.new(
   name: "Apprendre une chanson",
   level: "moyen",
   format: "dans la vraie vie",
   category: "arts et musique",
-  content: "Apprendre à jouer une nouvelle chanson sur un instrument de musique.",
+  content: "Apprendre à chanter une nouvelle chanson, idéalement avec un instrument de musique !",
   time: "court",
   reward: 100,
   public: true
@@ -897,7 +897,7 @@ Step.create!(
   position: 3
 )
 
-file = URI.open("https://res.cloudinary.com/dxglkewb3/image/upload/v1723195346/samples/look-up.jpg")
+file = URI.open("https://res.cloudinary.com/dxglkewb3/image/upload/v1724678325/getty-images-IrydWzRk8Tg-unsplash_dlck06.jpg")
 challenge34 = Challenge.new(
   name: "Créer une chorégraphie",
   level: "moyen",
@@ -926,13 +926,14 @@ Step.create!(
   position: 3
 )
 
-file = URI.open("https://res.cloudinary.com/dxglkewb3/image/upload/v1723195346/samples/look-up.jpg")
+file = URI.open("https://res.cloudinary.com/dxglkewb3/image/upload/v1724678656/matt-popovich-4ZzIzTcYsRY-unsplash_l9msdk.jpg")
 challenge35 = Challenge.new(
   name: "Présentation orale",
   level: "moyen",
   format: "dans la vraie vie",
   category: "arts et musique",
-  content: "Préparer une présentation orale sur un sujet culturel.",
+  content: "Préparer une présentation orale d'un film ou d'un livre,
+  l'objectif étant de donner envie de le voir ou de le lire !",
   time: "court",
   reward: 100,
   public: true
@@ -955,13 +956,13 @@ Step.create!(
   position: 3
 )
 
-file = URI.open("https://res.cloudinary.com/dxglkewb3/image/upload/v1723195346/samples/look-up.jpg")
+file = URI.open("https://res.cloudinary.com/dxglkewb3/image/upload/v1724678882/annie-spratt-nWAlCB1tyvc-unsplash_1_lgqja6.jpg")
 challenge36 = Challenge.new(
   name: "Atelier artistique",
   level: "moyen",
   format: "dans la vraie vie",
   category: "arts et musique",
-  content: "Participer à un atelier artistique local.",
+  content: "Participer à un atelier artistique local : peinture, macramé, origami, etc...",
   time: "modéré",
   reward: 150,
   public: true
@@ -980,7 +981,7 @@ Step.create!(
 )
 
 # Category: Média et communication
-file = URI.open("https://res.cloudinary.com/dxglkewb3/image/upload/v1723195346/samples/look-up.jpg")
+file = URI.open("https://res.cloudinary.com/dxglkewb3/image/upload/v1724679058/nik-sRCvLNF1pvk-unsplash_r5vmer.jpg")
 challenge37 = Challenge.new(
   name: "Créer un blog",
   level: "moyen",
@@ -1019,7 +1020,7 @@ Step.create!(
   position: 5
 )
 
-file = URI.open("https://res.cloudinary.com/dxglkewb3/image/upload/v1723195346/samples/look-up.jpg")
+file = URI.open("https://res.cloudinary.com/dxglkewb3/image/upload/v1724669599/brooke-lark-cqOZcjOOmRw-unsplash_eyzfne.jpg")
 challenge38 = Challenge.new(
   name: "Photographie thématique",
   level: "moyen",
@@ -1043,7 +1044,7 @@ Step.create!(
   position: 2
 )
 
-file = URI.open("https://res.cloudinary.com/dxglkewb3/image/upload/v1723195346/samples/look-up.jpg")
+file = URI.open("https://res.cloudinary.com/dxglkewb3/image/upload/v1724679275/jakob-owens-CiUR8zISX60-unsplash_owxgwm.jpg")
 challenge39 = Challenge.new(
   name: "Tourner une vidéo",
   level: "moyen",
@@ -1072,7 +1073,7 @@ Step.create!(
   position: 3
 )
 
-file = URI.open("https://res.cloudinary.com/dxglkewb3/image/upload/v1723195346/samples/look-up.jpg")
+file = URI.open("https://res.cloudinary.com/dxglkewb3/image/upload/v1724679368/curated-lifestyle-CB5zqj-97ek-unsplash_ghmnx7.jpg")
 challenge40 = Challenge.new(
   name: "Créer un portfolio en ligne",
   level: "moyen",
@@ -1097,7 +1098,7 @@ Step.create!(
 )
 
 # Category: Technologie
-file = URI.open("https://res.cloudinary.com/dxglkewb3/image/upload/v1723195346/samples/look-up.jpg")
+file = URI.open("https://res.cloudinary.com/dxglkewb3/image/upload/v1724679462/charlesdeluvio-0bTdk1u42KY-unsplash_fwwlf6.jpg")
 challenge41 = Challenge.new(
   name: "Créer une présentation simplifiée",
   level: "moyen",
@@ -1126,7 +1127,7 @@ Step.create!(
   position: 3
 )
 
-file = URI.open("https://res.cloudinary.com/dxglkewb3/image/upload/v1723195346/samples/look-up.jpg")
+file = URI.open("https://res.cloudinary.com/dxglkewb3/image/upload/v1724679593/typerium-app-hbfBIs_Q67g-unsplash_t7p22a.jpg")
 challenge42 = Challenge.new(
   name: "Développer une application mobile",
   level: "difficile",
@@ -1160,7 +1161,7 @@ Step.create!(
   position: 4
 )
 
-file = URI.open("https://res.cloudinary.com/dxglkewb3/image/upload/v1723195346/samples/look-up.jpg")
+file = URI.open("https://res.cloudinary.com/dxglkewb3/image/upload/v1724679693/kevin-ku-w7ZyuGYNpRQ-unsplash_espoi1.jpg")
 challenge43 = Challenge.new(
   name: "Configurer un serveur web",
   level: "moyen",
@@ -1189,7 +1190,7 @@ Step.create!(
   position: 3
 )
 
-file = URI.open("https://res.cloudinary.com/dxglkewb3/image/upload/v1723195346/samples/look-up.jpg")
+file = URI.open("https://res.cloudinary.com/dxglkewb3/image/upload/v1724679824/getty-images-dIzMSYjM36s-unsplash_uvpfcz.jpg")
 challenge44 = Challenge.new(
   name: "Apprendre une nouvelle technologie",
   level: "moyen",
@@ -1219,15 +1220,15 @@ Step.create!(
 )
 
 # Category: Société
-file = URI.open("https://res.cloudinary.com/dxglkewb3/image/upload/v1723195346/samples/look-up.jpg")
+file = URI.open("https://res.cloudinary.com/dxglkewb3/image/upload/v1724669596/eyoel-kahssay-FyCjvyPG9Pg-unsplash_xvaimm.jpg")
 challenge45 = Challenge.new(
-  name: "Plan d'action bénévole",
-  level: "moyen",
+  name: "Plan d'action - bénévolat",
+  level: "difficile",
   format: "dans la vraie vie",
   category: "société",
-  content: "Concevoir un plan d'action pour une activité bénévole.",
+  content: "Concevoir un plan d'action pour une activité bénévole qui s'étale sur une année.",
   time: "modéré",
-  reward: 100,
+  reward: 200,
   public: true
 )
 challenge45.photo.attach(io: file, filename: "challenge45.png", content_type: "image/png")
@@ -1248,7 +1249,7 @@ Step.create!(
   position: 3
 )
 
-file = URI.open("https://res.cloudinary.com/dxglkewb3/image/upload/v1723195346/samples/look-up.jpg")
+file = URI.open("https://res.cloudinary.com/dxglkewb3/image/upload/v1724680380/melissa-walker-horn-76HIoI5Ni1E-unsplash_ptppg9.jpg")
 challenge46 = Challenge.new(
   name: "Organiser une collecte de fonds",
   level: "moyen",
@@ -1282,7 +1283,7 @@ Step.create!(
   position: 4
 )
 
-file = URI.open("https://res.cloudinary.com/dxglkewb3/image/upload/v1723195346/samples/look-up.jpg")
+file = URI.open("https://res.cloudinary.com/dxglkewb3/image/upload/v1724680370/jason-goodman-bzqU01v-G54-unsplash_uv4dik.jpg")
 challenge47 = Challenge.new(
   name: "Animer un atelier",
   level: "moyen",
@@ -1311,7 +1312,7 @@ Step.create!(
   position: 3
 )
 
-file = URI.open("https://res.cloudinary.com/dxglkewb3/image/upload/v1723195346/samples/look-up.jpg")
+file = URI.open("https://res.cloudinary.com/dxglkewb3/image/upload/v1724680383/getty-images-E7UFZJ0RUzQ-unsplash_vr55z9.jpg")
 challenge48 = Challenge.new(
   name: "Mission humanitaire ou écologique",
   level: "difficile",
