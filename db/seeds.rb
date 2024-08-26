@@ -121,7 +121,7 @@ Step.create!(
 file = URI.open("https://res.cloudinary.com/dxglkewb3/image/upload/v1724669597/getty-images-evsO5NsynMk-unsplash_2_riwems.jpg")
 challenge6 = Challenge.new(
   name: "Planter un arbre",
-  level: "moyen",
+  level: "difficile",
   format: "dans la vraie vie",
   category: "écologie",
   content: "Planter un arbre dans un lieu adapté public ou privé.",

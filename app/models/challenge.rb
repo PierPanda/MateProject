@@ -8,4 +8,14 @@ class Challenge < ApplicationRecord
     cat.insert(0, "All")
     return cat
   end
+
+  def self.time
+    time = Challenge.all.pluck(:time).uniq
+    return time
+  end
+
+  def self.level
+    level = Challenge.all.pluck(:level).uniq
+    return level
+  end
 end

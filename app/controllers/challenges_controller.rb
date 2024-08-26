@@ -11,4 +11,25 @@ class ChallengesController < ApplicationController
     @user_challenge = UserChallenge.new
     @challenge = Challenge.find(params[:id])
   end
+
+  def new
+    @category = params[:category]
+    @categories = Challenge.category
+    @level = params[:level]
+    @levels = Challenge.level
+    @time = params[:time]
+    @times = Challenge.time
+    @challenge = Challenge.new
+  end
+
+  def create
+    #recupérer les steps et itérer dessus pour les créer avec un step.new
+    @challenge = Challenge.new(challenge_params)
+  end
+
+  private
+
+  def challenge_params
+    params.require(:challenge).permit(:choix)
+  end
 end
