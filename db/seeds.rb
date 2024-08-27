@@ -6,8 +6,13 @@ User.destroy_all
 
 # Création des utilisateurs
 user1 = User.create!(email: "pleinlabox@gmail.com", password: "azerty", username: "Hayamiou")
+user1.avatar.attach(io: File.open("app/assets/images/avatars/2.png"), filename: "2.png", content_type: "image/png")
+
 user2 = User.create!(email: "test@gmail.com", password: "azerty", username: "PierPanda")
+user2.avatar.attach(io: File.open("app/assets/images/avatars/0.png"), filename: "0.png", content_type: "image/png")
+
 user3 = User.create!(email: "labox@gmail.com", password: "azerty", username: "All_Anaïs")
+user3.avatar.attach(io: File.open("app/assets/images/avatars/1.png"), filename: "1.png", content_type: "image/png")
 
 # Category: Sportif
 file = URI.open("https://res.cloudinary.com/dxglkewb3/image/upload/v1724669610/natalia-blauth-XfnnyFtobXo-unsplash_1_cjy2z9.jpg")
