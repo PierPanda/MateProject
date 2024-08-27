@@ -1,4 +1,4 @@
-class ChallengeOpenAi
+class ChallengeOpenai
   def initialize(challenge)
     @client = OpenAI::Client.new
     @challenge = challenge
