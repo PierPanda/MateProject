@@ -2,12 +2,10 @@ class UserChallengeStepsController < ApplicationController
 
   def update
     @user_challenge_step = UserChallengeStep.find(params[:id])
-    @user_challenge_step.update(user_challenge_step_params)
-    respond_to do |format|
-      format.turbo_stream do
-        render turbo_stream: turbo_stream.replace("submit-#{@user_challenge_step.id}", partial: "user_challenges/simple_form_submit_checkbox", locals: { user_challenge_step: @user_challenge_step})
-      end
-      format.html { redirect_to user_challenge_path(@user_challenge_step.user_challenge) }
+    if @user_challenge_step.update(user_challenge_step_params)
+      redirect_to user_challenge_path(@user_challenge_step.user_challenge)
+    else
+      render "user_challenges/show", status: :unprocessable_entity
     end
   end
 
