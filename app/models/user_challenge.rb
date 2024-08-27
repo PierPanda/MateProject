@@ -14,14 +14,6 @@ class UserChallenge < ApplicationRecord
     percentage.round(2)
   end
 
-  def user_score
-    if score_percentage >= 100
-      @user.score += @challenge.rewards
-    else
-      @user.score += 0
-    end
-  end
-
   private
 
   def create_user_challenge_steps

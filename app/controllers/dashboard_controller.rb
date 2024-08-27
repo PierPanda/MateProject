@@ -25,5 +25,17 @@ class DashboardController < ApplicationController
       @accomplished = true
       @user_challenges = current_user.user_challenges.where(done: true)
     end
+    @user = current_user.increase_score
   end
+
+  private
+
+  def increase_score
+    if score_percentage >= 100
+      @user.score += @challenge.rewards
+    else
+      @user.score += 0
+    end
+  end
+
 end
