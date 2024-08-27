@@ -1,6 +1,8 @@
 <div class="container">
   <div class="card-trip mt-2">
-    <%= cl_image_tag(challenge.photo.key)%>
+    <div class="image-container">
+      <%= cl_image_tag(challenge.photo.key)%>
+    </div>
     <div class="card-trip-infos">
       <div>
         <h2>Level: 1</h2>
@@ -8,11 +10,9 @@
         <h2><%= challenge.name.capitalize %></h2>
         <p><%= challenge.category %></p>
       </div>
-      <h2 class="card-trip-pricing"><%= challenge.reward %> points</h2>
-      <div class="circular-progress">
-        <div class="avatar">
-          <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
-        </div>
+      <h2 class="card-trip-infos"><%= challenge.reward %> points</h2>
+      <div class="avatar pe-5 pb-3">
+        <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
       </div>
     </div>
   </div>
