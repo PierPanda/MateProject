@@ -5,7 +5,7 @@
   border-radius: 10px;
 }
 
-.card-trip > img {
+.image-container > img {
   height: 200px;
   width: 100%;
   object-fit: cover;
@@ -29,7 +29,6 @@
   margin: 0;
 }
 
-
 .card-trip .card-trip-infos {
   padding-top: 16px;
   padding-left: 12px;
@@ -41,7 +40,6 @@
 
 .card-trip-infos .card-trip-user {
   position: absolute;
-
   top: -20px;
   width: 40px;
 }
@@ -55,15 +53,8 @@
     font-size: 14px;
     text-wrap: balance;
   }
-
 }
 
 .btn-group{
 	display: flex;
-}
-
-.image-container > img {
-  height: 200px;
-  width: 100%;
-  object-fit: cover;
 }

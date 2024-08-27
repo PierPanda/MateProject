@@ -4,6 +4,7 @@
   <div class="card-trip mt-2">
     <div class ="image-container">
       <%= cl_image_tag(@chachallenges.photo.key) %>
+    </div>
       <div class="container_pourcentage" data-controller="progress-bar" data-progress-bar-pourcentage-value="<%= @user_challenge.score_percentage %>">
         <div class="circle_percent" data-progress-bar-target="circlePercent">
             <div class="circle_inner">
@@ -44,10 +45,10 @@
   </div>
 </div>
 
-<div class="d-flex justify-content-center my-3">
+<!--<div class="d-flex justify-content-center my-3">-->
   <%#= link_to "Commencer", use, class: "btn-ghost text-decoration-none" %>
-  <%= render '/challenges/new_user_challenge', challenge: @challenge, user_challenge: @user_challenge %>
-</div>
+  <%#= render '/challenges/new_user_challenge', challenge: @challenge, user_challenge: @user_challenge %>
+<!--</div>-->
 
 
 <!--<div class="container" data-controller="progress-bar" data-progress-bar-pourcentage-value="<%#= @user_challenge.score_percentage %>">
