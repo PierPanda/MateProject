@@ -25,7 +25,11 @@
     <div class="col-md-12">
       <div class="row row-cols-1 row-cols-lg-3 align-items-stretch">
         <% @user_challenges.each do |user_challenge| %>
-          <%= render "challenges/challenge", challenge: user_challenge.challenge %>
+          <div class="col mb-4">
+            <%= link_to challenge_path(user_challenge.challenge), class: "text-decoration-none" do %>
+              <%= render "challenges/challenge", challenge: user_challenge.challenge %>
+            <% end %>
+          </div>
         <% end %>
       </div>
     </div>
@@ -34,4 +38,3 @@
 
 
 <script src="application.js"></script>
-
