@@ -3,7 +3,7 @@ class UserChallenge < ApplicationRecord
   belongs_to :challenge
   has_many :user_challenge_steps, dependent: :destroy
   after_update :increase_score
-
+  validates :user, uniqueness: { scope: :challenge, message: "Challenge déjà sélectionné !" }
 
   after_create_commit :create_user_challenge_steps
 

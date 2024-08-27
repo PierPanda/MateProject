@@ -25,13 +25,18 @@ class ChallengesController < ApplicationController
     # Appeler le service ChallengeOpenAI avec le challenge en argument
 
     @challenge = Challenge.new(challenge_params)
-    @challenge_openai_service = ChallengeOpenaI.new(@challenge)
+    @challenge_openai_service = ChallengeOpenai.new(@challenge)
     @challenge_openai_service.call
+    if @challenge.save
+      redirect_to challenge_path(@challenge)
+    else
+      render :new , status: :unprocessable_entity
+    end
   end
 
   private
 
   def challenge_params
-    params.require(:challenge).permit(:choix)
+    params.require(:challenge).permit(:level, :category, :time, :content, :submit)
   end
 end

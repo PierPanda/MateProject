@@ -16,7 +16,7 @@ class UserChallengesController < ApplicationController
     if @user_challenge.save
       redirect_to user_challenge_path(@user_challenge)
     else
-      render "challenges/show", status: 422
+      redirect_to challenges_path, notice: 'Challenge déjà sélectionné !'
     end
   end
 

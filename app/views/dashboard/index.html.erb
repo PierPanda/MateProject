@@ -1,5 +1,5 @@
  <div class="container">
-  <div class="px-3 py-3 my-5 text-center" id="header-dashboard">
+  <div class="px-3 py-3 text-center" id="header-dashboard">
     <%= render "shared/avatar" %>
       <p class="mb-4 display-5">Welcome <%= current_user.username %> !</p>
       <div class="col-lg-6 mx-auto">
@@ -20,17 +20,39 @@
   </div>
 </div>
 
+<div class="container mt-3 mb-4">
+  <div class="text-center d-flex row mx-auto" id="header-dashboard">
+    <div class="col-4">
+      <h1>Salut</h1>
+    </div>
+    <div class="col-4">
+      <h1>salut</h1>
+    </div>
+    <div class="col-4">
+      <h1>salut</h1>
+    </div>
+  </div>
+</div>
+
+<div class="container d-flex justify-content-center">
+  <%= link_to "Créer", new_challenge_path, class:'btn-ghost' %>
+</div>
+
+
 <div class="container" id="section1">
-  <div class="row pt-5">
+  <div class="row mt-4">
     <div class="col-md-12">
       <div class="row row-cols-1 row-cols-lg-3 align-items-stretch">
         <% @user_challenges.each do |user_challenge| %>
-          <%= render "challenges/challenge", challenge: user_challenge.challenge %>
+          <div class="col mb-4">
+            <%= link_to challenge_path(user_challenge.challenge), class: "text-decoration-none" do %>
+              <%= render "challenges/challenge", challenge: user_challenge.challenge %>
+            <% end %>
+          </div>
         <% end %>
       </div>
     </div>
   </div>
 </div>
-
 
 <script src="application.js"></script>
