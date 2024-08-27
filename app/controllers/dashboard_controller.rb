@@ -26,4 +26,5 @@ class DashboardController < ApplicationController
       @user_challenges = current_user.user_challenges.where(done: true)
     end
   end
+
 end
