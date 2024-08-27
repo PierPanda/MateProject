@@ -7,19 +7,20 @@ class Challenge < ApplicationRecord
   TIME = ["court", "modéré", "long"]
   LEVEL = ["facile", "moyen", "difficile"]
 
-  # def self.category
-  #   cat = Challenge.all.pluck(:category).uniq
-  #   cat.insert(0, "All")
-  #   return cat
-  # end
-  #
-  # def self.time
-  #   time = Challenge.all.pluck(:time).uniq
-  #   return time
-  # end
-
-  # def self.level
-  #   level = Challenge.all.pluck(:level).uniq
-  #   return level
-  # end
 end
+
+# def self.category
+#   cat = Challenge.all.pluck(:category).uniq
+#   cat.insert(0, "All")
+#   return cat
+# end
+#
+# def self.time
+#   time = Challenge.all.pluck(:time).uniq
+#   return time
+# end
+
+# def self.level
+#   level = Challenge.all.pluck(:level).uniq
+#   return level
+# end

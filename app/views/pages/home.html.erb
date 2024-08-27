@@ -1,14 +1,14 @@
 <div class="banner">
   <div class="container text-center">
-    <h1><strong>MATE</strong></h1>
-    <p>Défiez vous, dépassez vous</p>
+    <%= image_tag "logo-white.png", alt: "Logo-White", style: "width: 50%; height: auto;" %>
+    <h2>Défiez vous, dépassez vous</h2>
   </div>
 </div>
 
 <div class="slider-container">
   <ul class="list list-unstyled mt-4">
     <% @challenges.each do |challenge| %>
-      <li class="item card-category text-center" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(<%= cl_image_path(challenge.photo.key) %>)">
+      <li class="item card-category text-center" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= cl_image_path(challenge.photo.key) %>)">
         <div>
           <%= link_to challenge_path(challenge), class:"text-decoration-none text-white" do %>
             <%= challenge.name %>
