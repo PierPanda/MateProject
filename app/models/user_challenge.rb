@@ -6,6 +6,22 @@ class UserChallenge < ApplicationRecord
 
   after_create_commit :create_user_challenge_steps
 
+  def score_percentage
+    completed_steps = user_challenge_steps.where(status: true).count
+    total_steps = challenge.steps.count
+    return 0 if total_steps == 0
+    percentage = (completed_steps.to_f / total_steps.to_f) * 100
+    percentage.round(2)
+  end
+
+  def user_score
+    if score_percentage >= 100
+      @user.score += @challenge.rewards
+    else
+      @user.score += 0
+    end
+  end
+
   private
 
   def create_user_challenge_steps
