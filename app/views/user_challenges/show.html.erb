@@ -4,7 +4,7 @@
 <div class="container">
   <div class="card-trip mt-2">
     <div class ="image-container">
-      <%= cl_image_tag(@chachallenges.photo.key) %>
+      <%= cl_image_path(@chachallenges.photo.key) %>
     </div>
     <div class="container_pourcentage" data-controller="progress-bar" data-progress-bar-pourcentage-value="<%= @user_challenge.score_percentage %>">
       <div class="circle_percent" data-progress-bar-target="circlePercent">
@@ -16,7 +16,6 @@
     </div>
     <div class="card-trip-infos">
       <div>
-        <h2>Level:<%= challenge.level</h2>  %>
         <h2><%= @chachallenges.name.capitalize %></h2>
         <p><%= @chachallenges.category %></p>
       </div>
