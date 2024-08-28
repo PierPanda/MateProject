@@ -2,12 +2,14 @@
   text-align: center;
   color: $light-gray;
   background-color: $secondary;
-  padding: 12px 60px;
+  padding: 5px 15px;
   border-radius: 20px;
   font-size: 20px;
   font-weight:bold;
   box-shadow: 0 0 2px $light-gray;
-  text-shadow: 0 0 6px silver
+  text-shadow: 0 0 6px silver;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 .btn-ghost2 {
@@ -17,7 +19,7 @@
   padding: 0.75rem 1.5rem; /* Espacement interne pour un aspect de bouton */
   border-radius: 5px;
   display: inline-block;
-  text-shadow: 0 0 6px silver
+  text-shadow: 0 0 6px silver;
 }
 
 .w-100 {
