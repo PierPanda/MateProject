@@ -2,23 +2,22 @@
   <div class="border border-dark border-1 px-3 py-3 text-center" id="header-dashboard">
     <%= render "shared/avatar" %>
     <p class="my-4 display-5">Bienvenue <%= current_user.username %> ! </p>
-    <div class="row mx-auto d-flex align-items-stretch">
+    <div class="row mx-auto d-flex align-items-stretch" id="line-height">
       <div class="col-6 d-flex justify-content-center align-items-center">
-        <div class="border border-dark border-1 btn-ghost2 text-center d-flex justify-content-center align-items-center w-100 h-100">
-          <span>score <%= current_user.score %></span>
+        <div class="border border-dark border-3 btn-ghost2 text-center d-flex justify-content-center align-items-center w-100 h-100">
+          <span><strong>Score </strong><%= current_user.score %></span>
         </div>
       </div>
       <div class="col-6 d-flex justify-content-center align-items-center">
-        <%= link_to "Créer un défi", new_challenge_path, class:'border border-dark border-1 btn-ghost2 text-center d-flex justify-content-center align-items-center w-100 h-100' %>
+        <%= link_to "<strong>Créer un défi</strong>".html_safe, new_challenge_path, class:'border border-dark border-3 btn-ghost2 text-center d-flex justify-content-center align-items-center w-100 h-100' %>
       </div>
     </div>
   </div>
 </div>
 
 
-
 <div class="container mt-3 mb-3 ">
-  <div class="border border-dark border-1 text-center d-flex row mx-auto" id="header-dashboard">
+  <div class="border border-dark border-3 text-center d-flex row mx-auto" id="header-dashboard">
     <div class="d-grid gap-1 d-sm-flex justify-content-center justify-content-sm-center" data-controller="tab">
       <ul class="pt-3 list-inline tabs-underlined">
       <li class="mx-2">
