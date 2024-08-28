@@ -25,7 +25,7 @@ class ChallengesController < ApplicationController
     # Appeler le service ChallengeOpenAI avec le challenge en argument
 
     @challenge = Challenge.new(challenge_params)
-    @challenge_openai_service = ChallengeOpenai.new(@challenge)
+    @challenge_openai_service = ChallengeOpenaiService.new(@challenge)
     @challenge_openai_service.call
     if @challenge.save
       redirect_to challenge_path(@challenge)
