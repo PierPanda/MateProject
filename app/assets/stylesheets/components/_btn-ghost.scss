@@ -8,3 +8,16 @@
   font-weight:bold;
   box-shadow: 0 0 2px $light-gray;
 }
+
+.btn-ghost2 {
+  background-color: $secondary; /* Fond vert */
+  color: black; /* Texte blanc */
+  text-decoration: none; /* Retirer le soulignement */
+  padding: 0.75rem 1.5rem; /* Espacement interne pour un aspect de bouton */
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.w-100 {
+  width: 100%;
+}

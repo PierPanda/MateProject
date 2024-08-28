@@ -1,41 +1,38 @@
- <div class="container">
-  <div class="px-3 py-3 text-center" id="header-dashboard">
+<div class="container">
+  <div class="border border-dark border-1 px-3 py-3 text-center" id="header-dashboard">
     <%= render "shared/avatar" %>
-      <p class="mb-4 display-5">Welcome <%= current_user.username %> !</p>
-      <div class="col-lg-6 mx-auto">
-        <div class="d-grid gap-1 d-sm-flex justify-content-evenly justify-content-sm-center"         data-controller="tab">
-          <ul class="list-inline tabs-underlined">
-            <li>
-              <%= link_to "En cours", dashboard_path(status: 'in_progress'), class:"tab-underlined #{'active' if @in_progress}"%>
-            </li>
-            <li>
-              <%= link_to "Personnalisés", dashboard_path(status: 'personal_challenges'), class:"tab-underlined #{'active' if @personal_challenges}"%>
-            </li>
-            <li>
-              <%= link_to "Validés", dashboard_path(status: 'accomplished'), class:"tab-underlined #{'active' if @accomplished}"%>
-            </li>
-          </ul>
+    <p class="my-4 display-5">Bienvenue <%= current_user.username %> ! </p>
+    <div class="row mx-auto d-flex align-items-stretch">
+      <div class="col-6 d-flex justify-content-center align-items-center">
+        <div class="border border-dark border-1 btn-ghost2 text-center d-flex justify-content-center align-items-center w-100 h-100">
+          <span>score <%= current_user.score %></span>
         </div>
       </div>
-  </div>
-</div>
-
-<div class="container mt-3 mb-4">
-  <div class="text-center d-flex row mx-auto" id="header-dashboard">
-    <div class="col-4">
-      <h1>Salut</h1>
-    </div>
-    <div class="col-4">
-      <h1>salut</h1>
-    </div>
-    <div class="col-4">
-      <h1>salut</h1>
+      <div class="col-6 d-flex justify-content-center align-items-center">
+        <%= link_to "Créer un défi", new_challenge_path, class:'border border-dark border-1 btn-ghost2 text-center d-flex justify-content-center align-items-center w-100 h-100' %>
+      </div>
     </div>
   </div>
 </div>
 
-<div class="container d-flex justify-content-center">
-  <%= link_to "Créer", new_challenge_path, class:'btn-ghost' %>
+
+
+<div class="container mt-3 mb-3 ">
+  <div class="border border-dark border-1 text-center d-flex row mx-auto" id="header-dashboard">
+    <div class="d-grid gap-1 d-sm-flex justify-content-center justify-content-sm-center" data-controller="tab">
+      <ul class="pt-3 list-inline tabs-underlined">
+      <li class="mx-2">
+        <%= link_to "En cours", dashboard_path(status: 'in_progress'), class:"tab-underlined #{'active' if @in_progress}" %>
+      </li>
+      <li class="mx-2">
+        <%= link_to "Custom", dashboard_path(status: 'personal_challenges'), class:"tab-underlined #{'active' if @personal_challenges}" %>
+      </li>
+      <li class="mx-2">
+        <%= link_to "Validés", dashboard_path(status: 'accomplished'), class:"tab-underlined #{'active' if @accomplished}" %>
+      </li>
+    </ul>
+    </div>
+  </div>
 </div>
 
 
