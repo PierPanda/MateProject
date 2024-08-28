@@ -1,11 +1,37 @@
 <%= render 'challenges/card_challenge', challenge: @challenge, user_challenge: @user_challenge %>
 
-<%= render 'challenges/content_challenge', challenge: @challenge, user_challenge: @user_challenge %>
-
-<%= render 'challenges/challenge_steps', challenge: @challenge %>
-
+<div class="accordeon-container">
+  <div class="accordion mx-1 rounded" id="accordionShow">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button collapsed rounded" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Description :
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <%= render 'challenges/content_challenge', challenge: @challenge, user_challenge: @user_challenge %>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTwo">
+        <button class="accordion-button collapsed rounded" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Steps :
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <%= render 'challenges/challenge_steps', challenge: @challenge %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <div class="d-flex justify-content-center my-3">
   <%# <%= link_to "Commencer", use, class: "btn-ghost text-decoration-none" %>
   <%= render 'challenges/new_user_challenge', challenge: @challenge, user_challenge: @user_challenge %>
 </div>
+
+<%= render "challenges/share_modal", challenge: @challenge %>
