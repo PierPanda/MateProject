@@ -12,14 +12,27 @@
 }
 
 .btn-ghost2 {
-  background-color: $secondary; /* Fond vert */
-  color: black; /* Texte blanc */
-  text-decoration: none; /* Retirer le soulignement */
-  padding: 0.75rem 1.5rem; /* Espacement interne pour un aspect de bouton */
+  background-color: $secondary;
+  color: white;
+  text-decoration: none;
   border-radius: 5px;
   display: inline-block;
+  font-weight:bold;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 24px;
+  font-weight:bold;
+  box-shadow: 0 0 2px $light-gray;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-align: center;
+  height: 90%;
 }
 
 .w-100 {
   width: 100%;
+}
+
+#line-height {
+  line-height: 20px;
 }
