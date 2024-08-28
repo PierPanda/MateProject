@@ -11,10 +11,12 @@ Rails.application.routes.draw do
   # root "posts#index"
   resources :challenges, only: %i[index show new create] do
     resources :user_challenges, only: %i[create]
+    collection do
+      get 'generated'
+    end
   end
   resources :user_challenges, only: %i[show]
   resources :user_challenge_steps, only: %i[update]
-  resources :challenges, only: %i[index show]
 
   get 'dashboard', to: 'dashboard#index'
   resources :user_challenges, only: %i[index update]
