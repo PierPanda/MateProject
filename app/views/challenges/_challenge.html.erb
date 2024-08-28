@@ -1,13 +1,14 @@
-<div class="col pb-5">
+<div class="col mb-3">
   <div class="card-category position-relative" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(<%= cl_image_path(challenge.photo.key) %>)">
     <div class="d-flex flex-column pb-3 text-white text-shadow-1 position-absolute top-0 start-0">
       <h3 class="py-5 px-3 fw-bold"><%= challenge.name %></h3>
     </div>
-    <div class="position-absolute bottom-0 end-0 mx-3 ">
+    <div class="position-absolute bottom-0 end-0 mx-3">
       <p class="ms-4"><strong><%= challenge.reward %> points</strong></p>
     </div>
   </div>
 </div>
+
 
 <div class="modal fade" id="staticBackdrop<%= challenge.id %>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
@@ -17,13 +18,12 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <p>level <%= challenge.level %></p><br>
-        <%= challenge.time %><br>
+        <p>Niveau: <%= challenge.level %></p><br>
         <%= challenge.content %><br>
       </div>
       <div class="modal-footer d-flex justify-content-center">
         <%= link_to challenge, class:"text-decoration-none" do %>
-            <button type="button" class="btn btn-ghost" data-bs-dismiss="modal">Voir le challenge</button>
+            <button type="button" class="btn btn-ghost" data-bs-dismiss="modal">Voir le challenge !</button>
         <% end %>
       </div>
     </div>
