@@ -1,8 +1,14 @@
 
-
-<%= simple_form_for challenge do |f| %>
-  <%= f.input :name, label: 'Nom du Challenge' %>
-  <%= f.input :public, as: :select, collection: [['Yes',true], ['No',false]] %>
-  <%= f.input :photo, as: :file %>
-  <%= f.submit "Lancer le challenge", class: "btn-ghost"%>
-<% end %>
+<div class="container container-new d-flex justify-content-center col-sm-3 col-xs-3">
+  <div class="feedback-form justify-content-center m-2">
+    <h2 class="header text-center">Nouveau challenge</h2>
+    <div>
+      <%= simple_form_for challenge do |f| %>
+        <%= f.input :name, label: 'Nom du Challenge' %>
+        <%= f.input :public, as: :select, collection: [['Yes',true], ['No',false]] %>
+        <%= f.input :photo, as: :file %>
+        <%= f.submit "Lancer le challenge", class: "btn-ghost"%>
+      <% end %>
+    </div>
+  </div>
+</div>
