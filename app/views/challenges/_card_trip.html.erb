@@ -1,6 +1,5 @@
 <div class="card-trip">
-  <%= cl_image_tag(challenge.photo.key) %>
-  <div class="card-trip-infos">
+  <%= challenge.photo.attached? ? cl_image_path(challenge.photo.key) : "https://plus.unsplash.com/premium_photo-1669648874691-7252748ac426?q=80&w=2815&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" %>  <div class="card-trip-infos">
     <div>
       <h2>Title here</h2>
       <p>Short description here!</p>

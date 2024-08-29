@@ -1,5 +1,5 @@
 <div class="col mb-3">
-  <div class="border border-dark border-3 text-center card-category position-relative" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(<%= cl_image_path(challenge.photo.key) %>)">
+  <div class="border border-dark border-3 text-center card-category position-relative" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url:(<%= challenge.photo.attached? ? cl_image_tag(challenge.photo.key) : "https://plus.unsplash.com/premium_photo-1669648874691-7252748ac426?q=80&w=2815&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" %>)">
     <div class="d-flex flex-column pb-3 text-white text-shadow-1 position-absolute top-0 start-0">
       <h3 class="py-5 px-3 fw-bold"><%= challenge.name %></h3>
     </div>
