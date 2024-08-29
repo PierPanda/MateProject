@@ -1,67 +1,48 @@
 <div class="d-flex justify-content-center">
-  <button type="button" class="btn btn-ghost" data-bs-toggle="modal" data-bs-target="#alertModal">
-    ALERT
+  <button type="button" class="btn-ghost" data-bs-toggle="modal" data-bs-target="#alertModal">
+    DASHBOARD
   </button>
 </div>
 
-<div id="container">
-  <div id="success-box" class="feedback-box d-none">
-    <div class="dot"></div>
-    <div class="dot two"></div>
-    <div class="face">
-      <div class="eye"></div>
-      <div class="eye right"></div>
-      <div class="mouth happy"></div>
-    </div>
-    <div class="shadow scale"></div>
-    <div class="message text-center">
-      <h1 class="alert">Bravo!</h1>
-      <p>Tu as fini ton challenge, bg !!!</p>
-    </div>
-    <button class="button-box btn btn-success">
-      <h1 class="green">Retour</h1>
-    </button>
-  </div>
-
-  <div id="error-box" class="feedback-box d-none">
-    <div class="dot"></div>
-    <div class="dot two"></div>
-    <div class="face face2">
-      <div class="eye"></div>
-      <div class="eye right"></div>
-      <div class="mouth sad"></div>
-    </div>
-    <div class="shadow move"></div>
-    <div class="message text-center">
-      <h1 class="alert">BELLE PROGRESSION</h1>
-      <p>Tu gères, BG !!!</p>
-    </div>
-    <button class="button-box btn btn-danger">
-      <h1 class="red">RETOUR</h1>
-    </button>
-  </div>
-</div>
 
 <div class="modal fade" id="alertModal" tabindex="-1" aria-labelledby="alertModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-    <div class="modal-content rounded-5">
-      <div class="modal-header">
-        <h5 class="modal-title" id="alertModalLabel">Notification</h5>
+    <div class="modal-content modal-user-challenge rounded-5">
+      <div class="modal-body text-center">
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <% if @user_challenges.done ? %>
+        <% if user_challenge.done? %>
           <div id="success-box" class="feedback-box">
-            <%= render 'success-box' %>
+            <div class="dot"></div>
+            <div class="dot two"></div>
+            <div class="face">
+              <div class="eye"></div>
+              <div class="eye right"></div>
+              <div class="mouth happy"></div>
+            </div>
+            <div class="message text-center">
+              <h1 class="alert1 m-3">Bravo!</h1>
+              <p class ="little-text">Tu as fini ton challenge, bg !!!</p>
+            </div>
+            <button class="button-box btn btn-success">
+              <%= link_to 'Dashboard', dashboard_path, class: 'form-actions-sweetalert btn-ghost text-decoration-none' %>
+            </button>
           </div>
         <% else %>
           <div id="error-box" class="feedback-box">
-            <%= render 'error-box' %>
+            <div class="dot"></div>
+            <div class="dot two"></div>
+            <div class="face face2">
+              <div class="eye"></div>
+              <div class="eye right"></div>
+              <div class="mouth happy"></div>
+            </div>
+            <div class="message">
+              <h1 class="alert1 my-3 me-1"> CONTINUE </h1>
+              <p class ="little-text">Tu gères, BG !!!</p>
+            </div>
+            <%= link_to 'Dashboard', dashboard_path, class: 'form-actions-sweetalert btn-ghost text-decoration-none' %>
           </div>
         <% end %>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
       </div>
     </div>
   </div>
