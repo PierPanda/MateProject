@@ -39,8 +39,9 @@
   <%= render 'challenges/new_user_challenge', challenge: @challenge, user_challenge: @user_challenge %>
 </div>
 
-<div class="d-flex justify-content-center align-items-center gap-2 mt-5 mx-2 flex-wrap">
-  <%= link_to 'Dashboard', dashboard_path, class: 'form-actions btn-ghost' %>
+
+<div class="d-flex justify-content-evenly align-items-center gap-2 mt-5 col-sm-6 mx-auto my-5">
+  <%= link_to 'Dashboard', dashboard_path, class: 'form-actions btn-ghost text-decoration-none' %>
   <%= render "challenges/share_modal", challenge: @challenge %>
-  <%= link_to 'Back', challenges_path, class: 'form-actions btn-ghost' %>
+  <%= link_to 'Back', challenges_path, class: 'form-actions btn-ghost text-decoration-none' %>
 </div>
