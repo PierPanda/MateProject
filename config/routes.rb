@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
-  resources :challenges, only: %i[index show new create] do
+  resources :challenges, only: %i[index show new create edit update] do
     resources :user_challenges, only: %i[create]
     collection do
       get 'generated'
