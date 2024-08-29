@@ -104,7 +104,6 @@
   margin: 12px;
 }
 
-
 .accordion-header {
   background-color: $green !important;
 }
@@ -159,6 +158,7 @@
   background-color: $green;
   color: $light-gray;
   font-size: 20px;
+  text-shadow: 0 0 1px black;
 }
 
 .avatar {
