@@ -1,4 +1,4 @@
-<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= challenge.photo.attached? ? cl_image_path(challenge.photo.key) : 'Default-image.png' %>)">
+<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= challenge.photo.attached? ? cl_image_path(challenge.photo.key) : 'https://res.cloudinary.com/dxglkewb3/image/upload/v1724950493/Default-image_sruqqm.png' %>)">
   <h2><%= @challenge.name %></h2>
     <p><%= @challenge.content %></p>
 </div>
