@@ -1,7 +1,7 @@
 <div class="container">
   <div class="card-trip mt-2">
     <div class="image-container">
-      <%= challenge.photo.attached? ? cl_image_path(challenge.photo.key) : 'https://img.freepik.com/vecteurs-premium/vecteur-icone-image-par-defaut-page-image-manquante-pour-conception-site-web-application-mobile-aucune-photo-disponible_87543-11093.jpg' %>
+      <%= challenge.photo.attached? ? cl_image_tag(challenge.photo.key) : 'https://img.freepik.com/vecteurs-premium/vecteur-icone-image-par-defaut-page-image-manquante-pour-conception-site-web-application-mobile-aucune-photo-disponible_87543-11093.jpg' %>
     </div>
     <div class="card-trip-infos">
       <div>
