@@ -17,9 +17,24 @@
         <h2 class="text-center modal-title" id="exampleModalLabel"><span><strong><%= challenge.name %></strong></span></h2>
       </div>
       <div class="modal-body justify-content-center">
-        <p class="text-center justify-content-center"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p><br>
+        <div class="text-center">
+          <% case challenge.level %>
+          <% when 'Facile' %>
+            <% 1.times do %>
+              <i class="fa-solid fa-star"></i>
+            <% end %>
+          <% when 'Moyen' %>
+            <% 3.times do %>
+              <i class="fa-solid fa-star"></i>
+            <% end %>
+          <% when 'Difficile' %>
+            <% 5.times do %>
+              <i class="fa-solid fa-star"></i>
+            <% end %>
+          <% end %>
+        </div>
+        <br>
         <h2 class="text-center"><strong>Niveau: </strong><%= challenge.level %></h2><br>
-        <p class="text-center justify-content-center"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p><br>
         <h2 class="text-center"><%= challenge.content %></h2><br>
       </div>
       <div class="modal-footer d-flex justify-content-center">
