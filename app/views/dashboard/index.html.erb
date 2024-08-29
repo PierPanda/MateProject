@@ -23,9 +23,9 @@
       <li class="mx-2">
         <%= link_to "En cours", dashboard_path(status: 'in_progress'), class:"tab-underlined #{'active' if @in_progress}" %>
       </li>
-      <li class="mx-2">
-        <%= link_to "Custom", dashboard_path(status: 'personal_challenges'), class:"tab-underlined #{'active' if @personal_challenges}" %>
-      </li>
+      <%# <li class="mx-2">
+        <%= link_to "Crées", dashboard_path(status: 'personal_challenges'), class:"tab-underlined #{'active' if @challenge.user_id}" %>
+      <%# </li> %>
       <li class="mx-2">
         <%= link_to "Validés", dashboard_path(status: 'accomplished'), class:"tab-underlined #{'active' if @accomplished}" %>
       </li>
