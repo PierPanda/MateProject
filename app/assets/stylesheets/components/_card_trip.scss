@@ -145,3 +145,16 @@
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
+
+.accordion-button {
+  background-color: $secondary;
+  color: $light-gray;
+  font-size: 20px;
+}
+
+.avatar {
+  position: absolute;
+  right: 16px;
+  top: -20px;
+  width: 40px;
+}

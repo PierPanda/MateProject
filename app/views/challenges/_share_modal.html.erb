@@ -4,63 +4,32 @@
 </button>
 </div>
 
-<!-- Modal -->
-<div class="modal fade" id="shareModal" tabindex="-1" aria-labelledby="shareModalLabel" aria-hidden="true">
+<div class="modal fade" id="shareModal" tabindex="-1" aria-labelledby="shareModal" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-    <div class="modal-content">
+    <div class="modal-content rounded-5">
       <div class="modal-header">
-        <h4 class="modal-title" id="shareModalTitle"><%= challenge.name %></h4>
+        <h5 class="modal-title" id="shareProfileModalLabel">Partager mon profil</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <div class="share-buttons d-flex flex-column align-items-start">
-            <div class="share-button text-center mb-2">
-              <div class="share-button-secondary">
-                <div class="share-button-secondary-content">
-                  partager sur X
-                </div>
-              </div>
-              <div class="share-button-primary">
-                <i class="fa-brands fa-twitter"></i>
-              </div>
-            </div>
-
-            <div class="share-button text-center mb-2">
-              <div class="share-button-secondary">
-                <div class="share-button-secondary-content">
-                  partager sur Facebook
-                </div>
-              </div>
-              <div class="share-button-primary">
-                <i class="fa-brands fa-facebook-messenger"></i>
-              </div>
-            </div>
-
-          <div class="share-button text-center mb-2">
-            <div class="share-button-secondary">
-              <div class="share-button-secondary-content">
-                partager sur Instagram
-              </div>
-            </div>
-            <div class="share-button-primary">
-              <i class="fa-brands fa-instagram"></i>
-            </div>
-          </div>
-
-          <div class="share-button text-center mb-2">
-            <div class="share-button-secondary">
-              <div class="share-button-secondary-content">
-                copier le lien
-              </div>
-            </div>
-            <div class="share-button-primary">
-              <i class="fa-regular fa-copy"></i>
-            </div>
-          </div>
+        <p> Partager via :</p>
+        <div class="d-flex justify-content-between">
+          <%= link_to "#", class: "btn-secondary btn-lg share-btn" do %>
+            <i class="fab fa-facebook fa-2x"></i>
+          <% end %>
+          <%= link_to "#", class: "btn-secondary btn-lg share-btn" do %>
+            <i class="fa-brands fa-instagram fa-2x"></i>
+          <% end %>
+          <%= link_to "#", class: "btn-secondary btn-lg share-btn" do %>
+            <i class="fab fa-whatsapp fa-2x"></i>
+          <% end %>
+          <%= link_to "#", class: "btn-secondary btn-lg share-btn" do %>
+            <i class="fa-solid fa-copy fa-2x"></i>
+          <% end %>
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn-secondary" data-bs-dismiss="modal">Fermer</button>
       </div>
     </div>
   </div>
