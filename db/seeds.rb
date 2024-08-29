@@ -105,13 +105,13 @@ Step.create!(
   position: 1
 )
 
-# Category: Développement Personnel
+# Category: p
 file = URI.open("https://res.cloudinary.com/dxglkewb3/image/upload/v1724670719/prophsee-journals-bX-N-0sz8gg-unsplash_lz6qny.jpg")
 challenge5 = Challenge.new(
   name: "Tenir un journal quotidien",
   level: "Moyen",
   format: "Dans la vraie vie",
-  category: "Développement Personnel",
+  category: "p",
   content: "Tenir un journal quotidien de vos pensées et objectifs pendant 30 jours.",
   time: "Long",
   reward: 100,
@@ -540,13 +540,12 @@ Step.create!(
   position: 3
 )
 
-# Category: Scientifique
 file = URI.open("https://res.cloudinary.com/dxglkewb3/image/upload/v1724672254/diana-polekhina-ONuLIzB0UtA-unsplash_sw14sv.jpg")
 challenge21 = Challenge.new(
-  name: "Expérience Scientifique maison",
+  name: "Expérience scientifique maison",
   level: "Moyen",
   format: "Dans la vraie vie",
-  category: "Scientifique",
+  category: "Créatif",
   content: "Réaliser une expérience Scientifique simple à la maison.",
   time: "Court",
   reward: 75,
@@ -575,7 +574,7 @@ challenge22 = Challenge.new(
   name: "Article de vulgarisation",
   level: "Moyen",
   format: "En ligne",
-  category: "Scientifique",
+  category: "Technologique",
   content: "Écrire un article de vulgarisation Scientifique sur un sujet donné.",
   time: "Modéré",
   reward: 100,
@@ -604,7 +603,7 @@ challenge23 = Challenge.new(
   name: "Documentaire vidéo",
   level: "Moyen",
   format: "En ligne",
-  category: "Scientifique",
+  category: "Créatif",
   content: "Réaliser un documentaire vidéo de 5 minutes sur un phénomène naturel.",
   time: "Modéré",
   reward: 150,
@@ -638,7 +637,7 @@ challenge24 = Challenge.new(
   name: "Modèle de molécule",
   level: "Moyen",
   format: "Dans la vraie vie",
-  category: "Scientifique",
+  category: "Ecologie",
   content: "Créer un modèle d'une molécule en utilisant des matériaux recyclés.",
   time: "Court",
   reward: 100,
@@ -784,13 +783,13 @@ Step.create!(
   position: 2
 )
 
-# Category: Education
+# Category: Culturel
 file = URI.open("https://res.cloudinary.com/dxglkewb3/image/upload/v1724678013/mark-konig-INqYo7hwT-s-unsplash_sc9ieq.jpg")
 challenge29 = Challenge.new(
   name: "Apprendre une nouvelle langue",
   level: "Moyen",
   format: "En ligne",
-  category: "Education",
+  category: "Culturel",
   content: "Apprendre les bases d'une nouvelle langue en une semaine.",
   time: "Court",
   reward: 150,
@@ -819,7 +818,7 @@ challenge30 = Challenge.new(
   name: "Lire un livre en 4 jours",
   level: "Moyen",
   format: "Dans la vraie vie",
-  category: "Education",
+  category: "Culturel",
   content: "Lire un livre de 300 pages en moins de 4 jours.",
   time: "Court",
   reward: 100,
@@ -848,7 +847,7 @@ challenge31 = Challenge.new(
   name: "Rédiger un essai",
   level: "Moyen",
   format: "En ligne",
-  category: "Education",
+  category: "Créatif",
   content: "Rédiger un essai de 4 pages sur un sujet d'actualité en 48 heures et l'envoyer à 3 ami.es minimum !",
   time: "Court",
   reward: 150,
@@ -877,7 +876,7 @@ challenge32 = Challenge.new(
   name: "Tenir un journal quotidien",
   level: "Moyen",
   format: "Dans la vraie vie",
-  category: "Développement Personnel",
+  category: "Développement personnel",
   content: "Tenir un journal quotidien de vos pensées et objectifs pendant 7 jours.",
   time: "Court",
   reward: 50,
@@ -899,7 +898,7 @@ challenge33 = Challenge.new(
   name: "Apprendre une chanson",
   level: "Moyen",
   format: "Dans la vraie vie",
-  category: "Culturel",
+  category: "Créatif",
   content: "Apprendre à chanter une nouvelle chanson, idéalement avec un instrument de musique !",
   time: "Court",
   reward: 100,
@@ -928,7 +927,7 @@ challenge34 = Challenge.new(
   name: "Créer une chorégraphie",
   level: "Moyen",
   format: "Dans la vraie vie",
-  category: "Culturel",
+  category: "Créatif",
   content: "Créer une chorégraphie pour une chanson populaire.",
   time: "Court",
   reward: 100,
@@ -987,7 +986,7 @@ challenge36 = Challenge.new(
   name: "Atelier artistique",
   level: "Moyen",
   format: "Dans la vraie vie",
-  category: "Culturel",
+  category: "Créatif",
   content: "Participer à un atelier artistique local : peinture, macramé, origami, etc...",
   time: "Modéré",
   reward: 150,
@@ -1051,7 +1050,7 @@ challenge38 = Challenge.new(
   name: "Photographie thématique",
   level: "Moyen",
   format: "Dans la vraie vie",
-  category: "Technologique",
+  category: "Créatif",
   content: "Apprendre les bases de la photographie et faire une série de 10 photos sur un thème donné.",
   time: "Court",
   reward: 100,
@@ -1075,7 +1074,7 @@ challenge39 = Challenge.new(
   name: "Tourner une vidéo",
   level: "Moyen",
   format: "Dans la vraie vie",
-  category: "Technologique",
+  category: "Créatif",
   content: "Tourner une vidéo de 3 minutes sur un sujet de votre choix.",
   time: "Court",
   reward: 100,
@@ -1101,7 +1100,7 @@ Step.create!(
 
 file = URI.open("https://res.cloudinary.com/dxglkewb3/image/upload/v1724679368/curated-lifestyle-CB5zqj-97ek-unsplash_ghmnx7.jpg")
 challenge40 = Challenge.new(
-  name: "Créer un portfolio En ligne",
+  name: "Créer un portfolio en ligne",
   level: "Moyen",
   format: "En ligne",
   category: "Technologique",
@@ -1128,7 +1127,7 @@ challenge41 = Challenge.new(
   name: "Créer une présentation simplifiée",
   level: "Moyen",
   format: "En ligne",
-  category: "Technologique",
+  category: "Culturel",
   content: "Créer une présentation sur un sujet complexe et la rendre accessible à un large public.",
   time: "Court",
   reward: 100,
@@ -1388,4 +1387,13 @@ UserChallenge.create!(user: user3, challenge: challenge5, done: true)
 UserChallenge.create!(user: user3, challenge: challenge7)
 UserChallenge.create!(user: user3, challenge: challenge8)
 
-print(Challenge.count)
+# Calcul et attribution des scores aux utilisateurs
+user1.update(score: user1.user_challenges.where(done: true).sum { |uc| uc.challenge.reward })
+user2.update(score: user2.user_challenges.where(done: true).sum { |uc| uc.challenge.reward })
+user3.update(score: user3.user_challenges.where(done: true).sum { |uc| uc.challenge.reward })
+
+puts "Nombre de challenges = #{Challenge.count}"
+puts "Nombre de catégories = #{Challenge.distinct.count(:category)}"
+puts "Score User1 = #{user1.score}"
+puts "Score User2 = #{user2.score}"
+puts "Score User3 = #{user3.score}"
