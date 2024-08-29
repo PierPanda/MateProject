@@ -206,31 +206,36 @@ challenge9.save
 
 Step.create!(
   challenge: challenge9,
-  name: "<a href='https://www.louvre.fr/en/visites-en-ligne' target='_blank'>Visiter le Louvre, Paris</a>".html_safe,
+  name: "<a href='https://www.louvre.fr/en/visites-en-ligne
+  class='text-decoration:none' target='_blank'>Visiter le Louvre, Paris</a>".html_safe,
   position: 1
 )
 
 Step.create!(
   challenge: challenge9,
-  name: "<a href='https://www.moma.org/visit/virtual-tour' target='_blank'>Visiter le MoMA, New York</a>".html_safe,
+  name: "<a href='https://www.moma.org/visit/virtual-tour'
+  class='text-decoration:none' target='_blank'>Visiter le MoMA, New York</a>".html_safe,
   position: 2
 )
 
 Step.create!(
   challenge: challenge9,
-  name: "<a href='https://www.rijksmuseum.nl/en/rijksstudio' target='_blank'>Visiter le Rijksmuseum, Amsterdam</a>".html_safe,
+  name: "<a href='https://www.rijksmuseum.nl/en/rijksstudio'
+  class='text-decoration:none' target='_blank'>Visiter le Rijksmuseum, Amsterdam</a>".html_safe,
   position: 3
 )
 
 Step.create!(
   challenge: challenge9,
-  name: "<a href='https://www.iziko.org.za/virtual-exhibitions' target='_blank'>Visiter Iziko South African Museum</a>".html_safe,
+  name: "<a href='https://www.iziko.org.za/virtual-exhibitions'
+  class='text-decoration:none' target='_blank'>Visiter Iziko South African Museum</a>".html_safe,
   position: 4
 )
 
 Step.create!(
   challenge: challenge9,
-  name: "<a href='https://masp.org.br/en/masp-online' target='_blank'>Visiter Museu de Arte, São Paulo</a>".html_safe,
+  name: "<a href='https://masp.org.br/en/masp-online'
+  class='text-decoration:none' target='_blank'>Visiter Museu de Arte, São Paulo</a>".html_safe,
   position: 5
 )
 
@@ -1374,8 +1379,8 @@ UserChallenge.create!(user: user1, challenge: challenge7)
 UserChallenge.create!(user: user1, challenge: challenge8)
 
 UserChallenge.create!(user: user2, challenge: challenge45, done: true)
-UserChallenge.create!(user: user1, challenge: challenge28, done: true)
-UserChallenge.create!(user: user1, challenge: challenge23, done: true)
+UserChallenge.create!(user: user2, challenge: challenge28, done: true)
+UserChallenge.create!(user: user2, challenge: challenge23, done: true)
 UserChallenge.create!(user: user2, challenge: challenge15)
 UserChallenge.create!(user: user2, challenge: challenge5)
 
