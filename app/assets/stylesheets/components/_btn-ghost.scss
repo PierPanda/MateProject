@@ -1,33 +1,36 @@
 .btn-ghost {
   text-align: center;
-  color: #000000;
+  color: $light-gray;
   background-color: $secondary;
-  padding: 5px 15px;
+  padding: 15px 24px;
   border-radius: 20px;
   font-size: 20px;
   font-weight:bold;
-  box-shadow: 0 0 2px $light-gray;
+  box-shadow: 0 0 5px $light-gray;
+  text-shadow: 0 0 6px silver;
   padding-top: 15px;
   padding-bottom: 15px;
+  margin-bottom: 10px;
+  border:0;
 }
 
-.btn-ghost2 {
-  background-color: $secondary;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  display: inline-block;
-  font-weight:bold;
-  padding: 5px 15px;
-  border-radius: 20px;
-  font-size: 24px;
-  font-weight:bold;
-  box-shadow: 0 0 2px $light-gray;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  text-align: center;
-  height: 90%;
-}
+// .btn-ghost2 {
+//   background-color: $secondary;
+//   color: white;
+//   text-decoration: none;
+//   border-radius: 5px;
+//   display: inline-block;
+//   font-weight:bold;
+//   padding: 5px 15px;
+//   border-radius: 20px;
+//   font-size: 24px;
+//   font-weight:bold;
+//   box-shadow: 0 0 2px $light-gray;
+//   padding-top: 15px;
+//   padding-bottom: 15px;
+//   text-align: center;
+//   height: 90%;
+// }
 
 .w-100 {
   width: 100%;

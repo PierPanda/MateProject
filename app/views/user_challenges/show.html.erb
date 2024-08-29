@@ -12,17 +12,15 @@
               <div class="round_per" data-progress-bar-target="roundPer"></div>
           </div>
       </div>
+
     </div>
     <div class="card-trip-infos">
       <div>
-        <h2>Level:<%= challenge.level</h2>  %>
-        <h2><%= @chachallenges.name %></h2>
+        <h2><%= @chachallenges.name.capitalize %></h2>
         <p><%= @chachallenges.category %></p>
       </div>
       <h2 class="card-trip-infos"><%= @chachallenges.reward %> points</h2>
-      <div class="avatar pe-5 pb-3">
-        <%= render "shared/avatar" %>
-      </div>
+      <%= render "shared/avatar"%>
     </div>
   </div>
 </div>
@@ -41,8 +39,8 @@
 </div>
 
 <div class="d-flex justify-content-center align-items-center gap-2 mt-5 col-sm-6 mx-2">
-  <%= link_to 'Dashboard', dashboard_path, class: 'form-actions btn btn-ghost' %>
-  <%= link_to 'Back', challenges_path, class: 'form-actions btn btn-ghost' %>
+  <%= link_to 'Dashboard', dashboard_path, class: 'form-actions btn-ghost text-decoration-none' %>
+  <%= link_to 'Back', challenges_path, class: 'form-actions btn-ghost text-decoration-none' %>
 </div>
 
 

@@ -1,7 +1,12 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: $secondary;
+
   padding: 0;
+
+  a {
+    color: $light-gray;
+  }
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -22,5 +27,4 @@
 .navbar-toggler{
   border-color: transparent;
   padding: 0;
-
 }

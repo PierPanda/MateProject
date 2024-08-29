@@ -23,15 +23,29 @@ class ChallengesController < ApplicationController
     #recupérer les steps et itérer dessus pour les créer avec un step.new
     # Instancier un challenge avec les challenge params
     # Appeler le service ChallengeOpenAI avec le challenge en argument
-
     @challenge = Challenge.new(challenge_params)
-    @challenge_openai_service = ChallengeOpenai.new(@challenge)
+    @challenge_openai_service = ChallengeOpenaiService.new(@challenge)
     @challenge_openai_service.call
+
     if @challenge.save
       redirect_to challenge_path(@challenge)
     else
       render :new , status: :unprocessable_entity
     end
+
+    def edit
+      @challenge = Challenge.find(params[:id])
+    end
+
+    def update
+      @challenge = Challenge.find(params[:id])
+      if @challenge.update(challenge_params)
+        redirect_to challenge_path(@challenge)
+      else
+        render :edit, status: :unprocessable_entity
+      end
+    end
+
   end
 
   private

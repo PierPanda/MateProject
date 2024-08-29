@@ -1,6 +1,17 @@
-<div id="submit-<%=user_challenge_step.id%>">
-
+<%# <div id="submit-<%=user_challenge_step.id%>">
+<%#
   <%= simple_form_for user_challenge_step, html: {data: { controller: "submit-form-checkbox" } } do |f| %>
-    <%= f.input :status, as: :boolean, label: user_challenge_step.step.name, input_html: { class: user_challenge_step.status ? 'is-valid' : '', data: { action: "change->submit-form-checkbox#submit" } } %>
+    <%# <%= f.input :status, as: :boolean, label: user_challenge_step.step.name, input_html: { class: user_challenge_step.status ? 'is-valid' : '', data: { action: "change->submit-form-checkbox#submit" } } %>
+  <%# <% end %>
+<%# </div> %>
+
+<div id="submit-<%= user_challenge_step.id %>">
+  <%= simple_form_for user_challenge_step, html: { data: { controller: "submit-form-checkbox" } } do |f| %>
+    <% label_content = user_challenge_step.step.name %>
+    <% if label_content.match?(/<[^>]+>/) %>
+      <%= f.input :status, as: :boolean, label: raw(label_content), input_html: { class: user_challenge_step.status ? 'is-valid' : '', data: { action: "change->submit-form-checkbox#submit" } } %>
+    <% else %>
+      <%= f.input :status, as: :boolean, label: label_content, input_html: { class: user_challenge_step.status ? 'is-valid' : '', data: { action: "change->submit-form-checkbox#submit" } } %>
+    <% end %>
   <% end %>
 </div>

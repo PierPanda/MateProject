@@ -24,8 +24,7 @@
 }
 
 .card-trip p {
-  font-size: 12px;
-  opacity: .7;
+  font-size: 16px;
   margin: 0;
 }
 
@@ -109,6 +108,53 @@
   border-radius: 10px;
 }
 
-#accordionShow {
-  border-radius: 10px;
+.accordeon-container {
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.accordion-body {
+  p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+  }
+  ul {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+  }
+}
+
+.accordion-item.card-trip:first-child {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.accordion-item.card-trip:last-child {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.accordion-button {
+  background-color: $secondary;
+  color: $light-gray;
+  font-size: 20px;
+}
+
+.avatar {
+  position: absolute;
+  right: 16px;
+  top: -20px;
+  width: 40px;
 }

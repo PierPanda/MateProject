@@ -234,7 +234,6 @@ Step.create!(
   position: 5
 )
 
-
 # Category: Technologique
 file = URI.open("https://res.cloudinary.com/dxglkewb3/image/upload/v1724669606/chris-ried-ieic5Tq8YMk-unsplash_ae9f54.jpg")
 challenge10 = Challenge.new(
@@ -1368,13 +1367,17 @@ Step.create!(
 )
 
 # Assignation de défis aux utilisateurs
-UserChallenge.create!(user: user1, challenge: challenge5, done: true)
+UserChallenge.create!(user: user1, challenge: challenge13, done: true)
+UserChallenge.create!(user: user1, challenge: challenge41, done: true)
+UserChallenge.create!(user: user1, challenge: challenge37, done: true)
 UserChallenge.create!(user: user1, challenge: challenge7)
 UserChallenge.create!(user: user1, challenge: challenge8)
 
-UserChallenge.create!(user: user2, challenge: challenge5, done: true)
-UserChallenge.create!(user: user2, challenge: challenge7)
-UserChallenge.create!(user: user2, challenge: challenge8)
+UserChallenge.create!(user: user2, challenge: challenge45, done: true)
+UserChallenge.create!(user: user1, challenge: challenge28, done: true)
+UserChallenge.create!(user: user1, challenge: challenge23, done: true)
+UserChallenge.create!(user: user2, challenge: challenge15)
+UserChallenge.create!(user: user2, challenge: challenge5)
 
 UserChallenge.create!(user: user3, challenge: challenge5, done: true)
 UserChallenge.create!(user: user3, challenge: challenge7)
