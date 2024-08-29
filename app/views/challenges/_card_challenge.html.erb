@@ -1,7 +1,7 @@
 <div class="container">
   <div class="card-trip mt-2">
     <div class="image-container">
-      <%= challenge.photo.attached? ? cl_image_path(challenge.photo.key) : "https://plus.unsplash.com/premium_photo-1669648874691-7252748ac426?q=80&w=2815&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" %>
+      <img src="<%= challenge.photo.attached? ? cl_image_path(challenge.photo.key) : "Default-image.png" %>" alt="Image">
     </div>
     <div class="card-trip-infos">
       <div>
