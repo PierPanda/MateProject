@@ -3,10 +3,9 @@ class Challenge < ApplicationRecord
   has_many :users_challenges
   has_one_attached :photo
 
-  CATEGORIES = ["Tous", "Culturel", "Sportif", "Créatif", "Culinaire", "Technologique", "Intellectuel", "Développement personnel", "Écologie", "Famille", "Bien-être", "Société", "Aventure"]
+  CATEGORIES = ["Tous", "Aventure", "Bien-être", "Créatif", "Culinaire", "Culturel", "Développement personnel", "Écologie", "Famille", "Intellectuel", "Société", "Sportif", "Technologique"]
   TIME = ["Court", "Modéré", "Long"]
   LEVEL = ["Facile", "Moyen", "Difficile"]
-
 end
 
 # def self.category
