@@ -1,6 +1,6 @@
 <div class="container">
-  <div class="border border-dark border-1 px-3 py-3 text-center" id="header-dashboard">
-    <%= render "shared/avatar" %>
+  <div class="px-3 py-3 text-center" id="header-dashboard">
+    <%= image_tag current_user.avatar, class:"border border-dark border-1 avatar-large", alt: "avatar-large" %>
     <p class="my-4 display-5">Bienvenue <%= current_user.username %> ! </p>
     <div class="row mx-auto d-flex align-items-stretch" id="line-height">
       <div class="col-6 d-flex justify-content-center align-items-center">
@@ -8,8 +8,8 @@
           <span><strong>Score </strong><%= current_user.score %></span>
         </div>
       </div>
-      <div class="col-6 d-flex justify-content-center align-items-center btn-ghost">
-        <%= link_to "<strong>Créer un défi</strong>".html_safe, new_challenge_path, class:'border border-dark border-3 btn-ghost2 text-center d-flex justify-content-center align-items-center w-100 h-100' %>
+      <div class="col-6 d-flex justify-content-center align-items-center">
+        <%= link_to "<strong>Créer un défi</strong>".html_safe, new_challenge_path, class:'border border-dark border-3 btn-ghost text-center d-flex justify-content-center align-items-center w-100 h-100 text-decoration-none' %>
       </div>
     </div>
   </div>
@@ -41,7 +41,7 @@
       <div class="row row-cols-1 row-cols-lg-3 align-items-stretch">
         <% @user_challenges.each do |user_challenge| %>
           <div class="col mb-4">
-            <%= link_to challenge_path(user_challenge.challenge), class: "text-decoration-none" do %>
+            <%= link_to user_challenge_path(user_challenge), class: "text-decoration-none" do %>
               <%= render "challenges/challenge", challenge: user_challenge.challenge %>
             <% end %>
           </div>
