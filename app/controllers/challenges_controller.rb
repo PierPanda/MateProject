@@ -3,7 +3,7 @@ class ChallengesController < ApplicationController
   def index
     # Si challenge[params vide], on affiche challenge.all, sinon on affiche les challenge par category
     @category = params[:category]
-    @challenges = @category == "All" || @category.blank? ? Challenge.all : Challenge.where(category: @category)
+    @challenges = @category == "Tous" || @category.blank? ? Challenge.all : Challenge.where(category: @category)
     @categories = Challenge::CATEGORIES
   end
 
@@ -28,13 +28,14 @@ class ChallengesController < ApplicationController
     @challenge_openai_service.call
 
     if @challenge.save
-      redirect_to challenge_path(@challenge)
+      redirect_to edit_challenge_path(@challenge)
     else
       render :new , status: :unprocessable_entity
     end
 
     def edit
       @challenge = Challenge.find(params[:id])
+      # render :edit
     end
 
     def update
@@ -51,6 +52,6 @@ class ChallengesController < ApplicationController
   private
 
   def challenge_params
-    params.require(:challenge).permit(:level, :category, :time, :content, :submit)
+    params.require(:challenge).permit(:level, :category, :time, :content, :submit, :public, :name, :photo)
   end
 end

@@ -8,7 +8,7 @@
 <div class="slider-container">
   <ul class="list list-unstyled mt-4">
     <% @challenges.each do |challenge| %>
-      <li class="item card-category text-center" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= cl_image_path(challenge.photo.key) %>)">
+      <li class="item card-category text-center" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= challenge.photo.attached? ? cl_image_path(challenge.photo.key) : "https://plus.unsplash.com/premium_photo-1669648874691-7252748ac426?q=80&w=2815&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" %>)">
         <div>
           <%= link_to challenge_path(challenge), class:"text-decoration-none text-white" do %>
             <%= challenge.name %>
