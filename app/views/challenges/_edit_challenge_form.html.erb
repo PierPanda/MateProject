@@ -1,11 +1,16 @@
 
 <div class="container container-new d-flex justify-content-center col-sm-3 col-xs-3">
   <div class="feedback-form justify-content-center m-2">
-    <h2 class="header text-center">Nouveau challenge</h2>
-    <div>
+    <h2 class="header text-center">Mon challenge</h2>
+    <div class="d-flex justify-content-center">
       <%= simple_form_for challenge do |f| %>
-        <%= f.input :name, label: 'Nom du Challenge' %>
-        <%= f.input :public, as: :select, collection: [['Yes',true], ['No',false]] %>
+        <%= f.input :name, label: 'Nom du Challenge', class:"text-black" %>
+        <p class="text-white">Détails</p>
+        <div class="card-trip my-2">
+          <div class="card-trip-infos">
+            <p class="ps-1"><%= @challenge.content %></p>
+          </div>
+        </div>
         <%= f.input :photo, as: :file %>
         <%= f.submit "Lancer le challenge", class: "btn-ghost"%>
       <% end %>

@@ -16,15 +16,17 @@
   font-weight: bold;
   margin: 0;
 }
+
 .card-trip h3 {
   font-size: 14px;
   font-weight: bold;
-  padding-top: 15px;
+  padding-top: 10px;
   margin-left: 5px;
 }
 
 .card-trip p {
   font-size: 16px;
+  padding-top: 5px;
   margin: 0;
 }
 
@@ -130,6 +132,7 @@
     margin-inline-end: 0px;
     unicode-bidi: isolate;
   }
+
   ul {
     display: block;
     margin-block-start: 1em;

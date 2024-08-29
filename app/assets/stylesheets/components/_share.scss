@@ -65,6 +65,7 @@ $box-height: 212px;
   overflow: hidden;
   margin-left: ($button-height / 2);
   height: $button-height;
+  border-radius: 15px;
 }
 
 .share-button-secondary-content {
