@@ -28,12 +28,13 @@ challenge1 = Challenge.new(
 )
 challenge1.photo.attach(io: file, filename: "challenge1.png", content_type: "image/png")
 challenge1.save
-
-Step.create!(
-  challenge: challenge1,
-  name: "Faire 10 000 pas par jour",
-  position: 1
-)
+(1..7).each do |i|
+  Step.create!(
+    challenge: challenge1,
+    name: "Jour #{i}",
+    position: i
+  )
+end
 
 # Category: Créatif
 file = URI.open("https://res.cloudinary.com/dxglkewb3/image/upload/v1724669598/natalia-blauth-OuXMqJwMLHk-unsplash_rna1ef.jpg")
@@ -46,11 +47,13 @@ challenge2 = Challenge.new(
 )
 challenge2.photo.attach(io: file, filename: "challenge2.png", content_type: "image/png")
 challenge2.save
-Step.create!(
-  challenge: challenge2,
-  name: "Prendre une photo créative chaque jour",
-  position: 30
-)
+(1..30).each do |i|
+  Step.create!(
+    challenge: challenge2,
+    name: "Jour #{i}",
+    position: i
+  )
+end
 
 # Category: Culinaire
 file = URI.open("https://res.cloudinary.com/dxglkewb3/image/upload/v1724669600/laura-adai-5jf7kzLBILE-unsplash_1_vuafkt.jpg")
@@ -116,11 +119,13 @@ challenge5 = Challenge.new(
 )
 challenge5.photo.attach(io: file, filename: "challenge5.png", content_type: "image/png")
 challenge5.save
-Step.create!(
-  challenge: challenge5,
-  name: "Écrire dans le journal chaque jour",
-  position: 30
-)
+(1..30).each do |i|
+  Step.create!(
+    challenge: challenge5,
+    name: "Jour #{i}",
+    position: i
+  )
+end
 
 # Category: Ecologie
 file = URI.open("https://res.cloudinary.com/dxglkewb3/image/upload/v1724669597/getty-images-evsO5NsynMk-unsplash_2_riwems.jpg")
@@ -156,11 +161,13 @@ challenge7 = Challenge.new(
 )
 challenge7.photo.attach(io: file, filename: "challenge7.png", content_type: "image/png")
 challenge7.save
-Step.create!(
-  challenge: challenge7,
-  name: "Dormir 8 heures par nuit",
-  position: 30
-)
+(1..30).each do |i|
+  Step.create!(
+    challenge: challenge7,
+    name: "Jour #{i}",
+    position: i
+  )
+end
 
 # Category: Société
 file = URI.open("https://res.cloudinary.com/dxglkewb3/image/upload/v1724669594/esra-afsar-Sueh0jNPpdo-unsplash_csnm7c.jpg")
@@ -196,31 +203,37 @@ challenge9 = Challenge.new(
 )
 challenge9.photo.attach(io: file, filename: "challenge9.png", content_type: "image/png")
 challenge9.save
+
 Step.create!(
   challenge: challenge9,
-  name: "Visiter le Louvre, Paris",
+  name: "<a href='https://www.louvre.fr/en/visites-en-ligne' target='_blank'>Visiter le Louvre, Paris</a>".html_safe,
   position: 1
 )
+
 Step.create!(
   challenge: challenge9,
-  name: "Visiter le MoMA, New York",
+  name: "<a href='https://www.moma.org/visit/virtual-tour' target='_blank'>Visiter le MoMA, New York</a>".html_safe,
   position: 2
 )
+
 Step.create!(
   challenge: challenge9,
-  name: "Visiter le Rijksmuseum, Amsterdam",
+  name: "<a href='https://www.rijksmuseum.nl/en/rijksstudio' target='_blank'>Visiter le Rijksmuseum, Amsterdam</a>".html_safe,
   position: 3
 )
+
 Step.create!(
   challenge: challenge9,
-  name: "Visiter Iziko South African Museum",
+  name: "<a href='https://www.iziko.org.za/virtual-exhibitions' target='_blank'>Visiter Iziko South African Museum</a>".html_safe,
   position: 4
 )
+
 Step.create!(
   challenge: challenge9,
-  name: "Visiter Museu de Arte, São Paulo",
+  name: "<a href='https://masp.org.br/en/masp-online' target='_blank'>Visiter Museu de Arte, São Paulo</a>".html_safe,
   position: 5
 )
+
 
 # Category: Technologique
 file = URI.open("https://res.cloudinary.com/dxglkewb3/image/upload/v1724669606/chris-ried-ieic5Tq8YMk-unsplash_ae9f54.jpg")
@@ -236,11 +249,13 @@ challenge10 = Challenge.new(
 )
 challenge10.photo.attach(io: file, filename: "challenge10.png", content_type: "image/png")
 challenge10.save
-Step.create!(
-  challenge: challenge10,
-  name: "Suivre un cours Python chaque jour",
-  position: 30
-)
+(1..30).each do |i|
+  Step.create!(
+    challenge: challenge10,
+    name: "Jour #{i}",
+    position: i
+  )
+end
 
 # Category: Famille
 file = URI.open("https://res.cloudinary.com/dxglkewb3/image/upload/v1724669589/michal-parzuchowski-geNNFqfvw48-unsplash_vahiyz.jpg")
@@ -866,11 +881,13 @@ challenge32 = Challenge.new(
 )
 challenge32.photo.attach(io: file, filename: "challenge32.png", content_type: "image/png")
 challenge32.save
-Step.create!(
-  challenge: challenge32,
-  name: "Écrire chaque jour dans le journal",
-  position: 1
-)
+(1..7).each do |i|
+  Step.create!(
+    challenge: challenge32,
+    name: "Jour #{i}",
+    position: i
+  )
+end
 
 # Category: Culturel
 file = URI.open("https://res.cloudinary.com/dxglkewb3/image/upload/v1724671577/paulette-wooten-FMiczIq8orU-unsplash_a5ykre.jpg")
@@ -1102,13 +1119,12 @@ Step.create!(
   position: 2
 )
 
-# Category: Technologie
 file = URI.open("https://res.cloudinary.com/dxglkewb3/image/upload/v1724679462/charlesdeluvio-0bTdk1u42KY-unsplash_fwwlf6.jpg")
 challenge41 = Challenge.new(
   name: "Créer une présentation simplifiée",
   level: "Moyen",
   format: "En ligne",
-  category: "Technologie",
+  category: "Technologique",
   content: "Créer une présentation sur un sujet complexe et la rendre accessible à un large public.",
   time: "Court",
   reward: 100,
@@ -1137,7 +1153,7 @@ challenge42 = Challenge.new(
   name: "Développer une application mobile",
   level: "Difficile",
   format: "En ligne",
-  category: "Technologie",
+  category: "Technologique",
   content: "Développer une petite application mobile en moins d'une semaine.",
   time: "Long",
   reward: 200,
@@ -1171,7 +1187,7 @@ challenge43 = Challenge.new(
   name: "Configurer un serveur web",
   level: "Moyen",
   format: "En ligne",
-  category: "Technologie",
+  category: "Technologique",
   content: "Configurer un serveur web et héberger un site simple.",
   time: "Modéré",
   reward: 150,
@@ -1197,11 +1213,11 @@ Step.create!(
 
 file = URI.open("https://res.cloudinary.com/dxglkewb3/image/upload/v1724679824/getty-images-dIzMSYjM36s-unsplash_uvpfcz.jpg")
 challenge44 = Challenge.new(
-  name: "Apprendre une nouvelle Technologie",
+  name: "Apprendre une nouvelle technologie",
   level: "Moyen",
   format: "En ligne",
   category: "Technologique",
-  content: "Apprendre à coder une fonctionnalité en utilisant une nouvelle Technologie.",
+  content: "Apprendre à coder une fonctionnalité en utilisant une nouvelle technologie.",
   time: "Modéré",
   reward: 150,
   public: true
@@ -1210,7 +1226,7 @@ challenge44.photo.attach(io: file, filename: "challenge44.png", content_type: "i
 challenge44.save
 Step.create!(
   challenge: challenge44,
-  name: "Choisir une nouvelle Technologie à apprendre",
+  name: "Choisir une nouvelle technologie à apprendre",
   position: 1
 )
 Step.create!(
@@ -1220,7 +1236,7 @@ Step.create!(
 )
 Step.create!(
   challenge: challenge44,
-  name: "Coder une fonctionnalité avec cette Technologie",
+  name: "Coder une fonctionnalité avec cette technologie",
   position: 3
 )
 
