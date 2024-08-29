@@ -49,8 +49,10 @@
 </div>
 
 <div class="d-flex justify-content-center align-items-center gap-2 mt-5 col-sm-6 mx-2">
+  <%= link_to challenges_path, class: 'btn-ghost text-decoration-none' do %>
+    <i class="fa-solid fa-chevron-left"></i>
+  <% end %>
   <%= render "challenges/sweetalert_modal", user_challenge: @user_challenge %>
-  <%= link_to 'Back', challenges_path, class: 'form-actions btn-ghost text-decoration-none' %>
 </div>
 
 

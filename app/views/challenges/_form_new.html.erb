@@ -1,6 +1,6 @@
 <div class="container container-new d-flex justify-content-center col-sm-3 col-xs-3">
   <div class="feedback-form justify-content-center m-2">
-    <h2 class="header text-center">Crée ton challenge !</h2>
+    <h2 class="header text-center">Crée ton challenge</h2>
     <div>
       <%= simple_form_for [@challenge] do |f| %>
         <%= f.input :category, collection: Challenge::CATEGORIES, as: :select, label: "Choisis ta catégorie", class:"mb-3 form-group" %>

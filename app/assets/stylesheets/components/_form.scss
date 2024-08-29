@@ -15,6 +15,9 @@
 
 .feedback-form * {
   box-sizing: border-box;
+  align-items: center;
+  border-radius: 15px;
+  width:240px;
 }
 
 .feedback-form h2{
@@ -25,7 +28,7 @@
 }
 
 .feedback-form input:not([type="submit"]) {
-  color: white;
+  color: rgb(0, 0, 0);
   display: block;
   height: 32px;
   padding: 6px 16px;
@@ -87,8 +90,8 @@
 }
 
 .form-filter::before {
-  content: "Filtrer par catégorie :";
   font-size: 18px;
+  border-radius: 20px;
   color: $light-gray;
   margin-right: 10px;
 }
