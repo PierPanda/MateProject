@@ -24,7 +24,7 @@
         <div class="accordion-body">
           <ul class="list-unstyled p-1">
             <% @challenge.steps.each do |challenge_step| %>
-            <li class="ps-1 text-decoration-none"> <i class="fa-regular fa-circle"></i> <%= challenge_step.name.html_safe %></li>
+            <li class="ps-1 text-decoration-none p-2"> <i class="fa-regular fa-circle"></i> <%= challenge_step.name.html_safe %></li>
             <% end %>
           </ul>
         </div>
@@ -71,3 +71,5 @@
     <%#= link_to 'Back', challenges_path, class: 'btn-ghost text-decoration-none' %>-->
 <!--  </div>
 </div>-->
+
+
