@@ -4,7 +4,7 @@
 <div class="container">
   <div class="card-trip mt-2">
     <div class ="image-container">
-      <img src="<%= @chachallenges.photo.attached? ? cl_image_path(challenge.photo.key) : 'https://res.cloudinary.com/dxglkewb3/image/upload/v1724950493/Default-image_sruqqm.png' %>" alt="Photo">
+      <img src="<%= @chachallenges.photo.attached? ? cl_image_path(@chachallenges.photo.key) : 'https://res.cloudinary.com/dxglkewb3/image/upload/v1724950493/Default-image_sruqqm.png' %>" alt="Photo">
     </div>
 <!--    <div class="container_pourcentage" data-controller="progress-bar" data-progress-bar-pourcentage-value="<%#= @user_challenge.score_percentage %>">
       <div class="circle_percent" data-progress-bar-target="circlePercent">

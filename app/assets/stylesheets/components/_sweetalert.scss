@@ -1,7 +1,7 @@
 $white: #FCFCFC;
 $gray: #F3F5FD;
 $dark: hsl(233, 81%, 8%);
-$error: #FD1015;
+$error: $blue;
 $success: rgb(19, 175, 19);
 $secondary: #84b01d;
 
@@ -62,7 +62,7 @@ button, .dot {
 }
 
 #error-box {
-  background: linear-gradient(to bottom left, $error 40%, $orange 100%);
+  background: linear-gradient(to bottom left, $error 40%, $green 100%);
 
 }
 
