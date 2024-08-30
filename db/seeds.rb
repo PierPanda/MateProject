@@ -1371,17 +1371,20 @@ Step.create!(
 )
 
 # Assignation de défis aux utilisateurs
-UserChallenge.create!(user: user1, challenge: challenge13, done: true)
-UserChallenge.create!(user: user1, challenge: challenge41, done: true)
-UserChallenge.create!(user: user1, challenge: challenge37, done: true)
+UserChallenge.create!(user: user1, challenge: challenge10, done: true)
+UserChallenge.create!(user: user1, challenge: challenge25, done: true)
+UserChallenge.create!(user: user1, challenge: challenge30, done: true)
+UserChallenge.create!(user: user1, challenge: challenge31, done: true)
 UserChallenge.create!(user: user1, challenge: challenge7)
-UserChallenge.create!(user: user1, challenge: challenge8)
+UserChallenge.create!(user: user1, challenge: challenge1)
+UserChallenge.create!(user: user1, challenge: challenge11)
 
 UserChallenge.create!(user: user2, challenge: challenge45, done: true)
 UserChallenge.create!(user: user2, challenge: challenge28, done: true)
 UserChallenge.create!(user: user2, challenge: challenge23, done: true)
-UserChallenge.create!(user: user2, challenge: challenge15)
-UserChallenge.create!(user: user2, challenge: challenge5)
+UserChallenge.create!(user: user2, challenge: challenge15, done: true)
+UserChallenge.create!(user: user2, challenge: challenge5, done: true)
+UserChallenge.create!(user: user2, challenge: challenge7)
 
 UserChallenge.create!(user: user3, challenge: challenge5, done: true)
 UserChallenge.create!(user: user3, challenge: challenge7)
